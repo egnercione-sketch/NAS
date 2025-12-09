@@ -1,0 +1,93 @@
+"""
+Correlation Filters Module (FASE 4 Lite)
+Filtra combinações ruins em trixies
+"""
+
+class TrixieCorrelationValidator:
+    def __init__(self):
+        self.position_groups = {
+            "BALL_DOMINANT": ["PG", "SG"],
+            "PAINT": ["C", "PF"],
+            "WING": ["SF", "SG"]
+        }
+    
+    def validate_trixie(self, trixie_players):
+        """
+        Valida uma trixie baseado em correlações
+        Retorna (is_valid, violations, score_adjustment)
+        """
+        violations = []
+        score_adjustment = 1.0  # Multiplicador inicial
+        
+        # 1. Mesmo time (máx 2 jogadores)
+        teams = [p.get("team") for p in trixie_players]
+        team_counts = {}
+        for team in teams:
+            team_counts[team] = team_counts.get(team, 0) + 1
+        
+        for team, count in team_counts.items():
+            if count > 2:
+                violations.append(f"TRIPLO_MESMO_TIME({team})")
+                score_adjustment *= 0.7  # Penalidade 30%
+        
+        # 2. Canibalismo de posição
+        positions = [p.get("position", "").upper() for p in trixie_players]
+        
+        # PG + PG (muito raro ambos explodirem)
+        if positions.count("PG") > 1:
+            violations.append("CANIBALISMO_PG")
+            score_adjustment *= 0.8
+        
+        # C + C (mesma lógica)
+        if positions.count("C") > 1:
+            violations.append("CANIBALISMO_C")
+            score_adjustment *= 0.85
+        
+        # 3. Blowout risk
+        spreads = [abs(p.get("spread", 0)) for p in trixie_players]
+        max_spread = max(spreads) if spreads else 0
+        
+        if max_spread > 12:
+            violations.append("BLOWOUT_ALTO")
+            score_adjustment *= 0.75
+        
+        # 4. Todas as mesmas teses (diversificação)
+        all_teses = []
+        for p in trixie_players:
+            all_teses.extend(p.get("tags", []))
+        
+        unique_teses = set(all_teses)
+        if len(unique_teses) < 3 and len(all_teses) >= 6:
+            violations.append("POUCA_DIVERSIDADE_TESES")
+            score_adjustment *= 0.9
+        
+        is_valid = len(violations) == 0
+        return is_valid, violations, score_adjustment
+    
+    def calculate_trixie_diversity_score(self, trixie_players):
+        """
+        Calcula score de diversidade da trixie
+        """
+        score = 1.0
+        
+        # Diversidade de times
+        teams = set(p.get("team") for p in trixie_players)
+        if len(teams) == 3:
+            score *= 1.15  # Bônus 15% para 3 times diferentes
+        
+        # Diversidade de mercados
+        markets = set()
+        for p in trixie_players:
+            mercado = p.get("mercado")
+            if mercado:
+                markets.add(mercado.get("tipo"))
+        
+        if len(markets) >= 2:
+            score *= 1.10  # Bônus 10% para múltiplos mercados
+        
+        # Diversidade de roles
+        roles = set(p.get("role") for p in trixie_players)
+        if len(roles) >= 2:
+            score *= 1.05
+        
+        return score

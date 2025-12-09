@@ -1,0 +1,127 @@
+{
+  "archetypes": {
+    "PaintBeast": {
+      "description": "Dominador do garrafão, rebotes e pontos próximos à cesta",
+      "conditions": {
+        "required": [
+          {"stat": "position", "operator": "in", "value": ["C", "PF"]},
+          {"stat": "reb_per_game", "operator": ">=", "value": 8.0}
+        ],
+        "optional": [
+          {"stat": "paint_points_per_game", "operator": ">=", "value": 8.0},
+          {"stat": "offensive_rebound_pct", "operator": ">=", "value": 0.10},
+          {"stat": "block_per_game", "operator": ">=", "value": 1.0}
+        ],
+        "threshold": 2
+      },
+      "impact": {
+        "rebounds": 1.15,
+        "points": 1.08,
+        "assists": 0.95
+      }
+    },
+    "FoulMerchant": {
+      "description": "Especialista em desequilíbrio, atrai muitas faltas",
+      "conditions": {
+        "required": [
+          {"stat": "free_throw_attempts_per_game", "operator": ">=", "value": 6.0}
+        ],
+        "optional": [
+          {"stat": "free_throw_rate", "operator": ">=", "value": 0.35},
+          {"stat": "and_one_per_game", "operator": ">=", "value": 0.5},
+          {"stat": "offensive_fouls_drawn", "operator": ">=", "value": 1.0}
+        ],
+        "threshold": 1
+      },
+      "impact": {
+        "points": 1.12,
+        "free_throws": 1.25,
+        "consistency": 1.05
+      }
+    },
+    "VolumeShooter": {
+      "description": "Alto volume de arremessos, especialmente de três",
+      "conditions": {
+        "required": [
+          {"stat": "three_point_attempts_per_game", "operator": ">=", "value": 8.0}
+        ],
+        "optional": [
+          {"stat": "usage_rate", "operator": ">=", "value": 25.0},
+          {"stat": "field_goal_attempts_per_game", "operator": ">=", "value": 15.0},
+          {"stat": "pull_up_three_rate", "operator": ">=", "value": 0.4}
+        ],
+        "threshold": 1
+      },
+      "impact": {
+        "points": 1.18,
+        "three_pointers": 1.22,
+        "volatility": 1.25
+      }
+    },
+    "Distributor": {
+      "description": "Criador de jogadas, alto AST/TO ratio",
+      "conditions": {
+        "required": [
+          {"stat": "assist_to_turnover_ratio", "operator": ">=", "value": 2.5},
+          {"stat": "assists_per_game", "operator": ">=", "value": 5.0}
+        ],
+        "optional": [
+          {"stat": "potential_assists_per_game", "operator": ">=", "value": 10.0},
+          {"stat": "secondary_assists_per_game", "operator": ">=", "value": 1.0},
+          {"stat": "time_of_possession", "operator": ">=", "value": 4.0}
+        ],
+        "threshold": 1
+      },
+      "impact": {
+        "assists": 1.20,
+        "consistency": 1.10,
+        "teammate_boost": 1.08
+      }
+    },
+    "GlassBanger": {
+      "description": "Especialista em rebotes, especialmente ofensivos",
+      "conditions": {
+        "required": [
+          {"stat": "offensive_rebound_pct", "operator": ">=", "value": 0.12}
+        ],
+        "optional": [
+          {"stat": "rebounds_per_game", "operator": ">=", "value": 10.0},
+          {"stat": "contested_rebound_pct", "operator": ">=", "value": 0.6},
+          {"stat": "putback_points_per_game", "operator": ">=", "value": 3.0}
+        ],
+        "threshold": 2
+      },
+      "impact": {
+        "rebounds": 1.25,
+        "second_chance_points": 1.30,
+        "efficiency": 1.15
+      }
+    },
+    "PerimeterLock": {
+      "description": "Especialista defensivo, roubos e defesa perimetral",
+      "conditions": {
+        "required": [
+          {"stat": "steals_per_game", "operator": ">=", "value": 1.5}
+        ],
+        "optional": [
+          {"stat": "defensive_rating", "operator": "<=", "value": 105},
+          {"stat": "deflections_per_game", "operator": ">=", "value": 2.5},
+          {"stat": "opponent_fg_pct_diff", "operator": "<=", "value": -0.03}
+        ],
+        "threshold": 1
+      },
+      "impact": {
+        "steals": 1.25,
+        "defensive_plays": 1.20,
+        "consistency": 1.08
+      }
+    }
+  },
+  "scoring": {
+    "base_confidence": 0.7,
+    "required_condition_weight": 0.6,
+    "optional_condition_weight": 0.4,
+    "minimum_confidence": 0.5,
+    "archetype_limit_per_player": 3
+  }
+}

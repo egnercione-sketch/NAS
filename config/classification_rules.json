@@ -1,0 +1,91 @@
+{
+  "player_classes": {
+    "GLASS_BANGERS": {
+      "description": "Rebatedores dominantes (C/PF com alto reb%)",
+      "conditions": [
+        {"stat": "position", "operator": "in", "value": ["C", "PF"]},
+        {"stat": "reb_per_min", "operator": ">=", "value": 0.20},
+        {"stat": "reb_L5", "operator": ">=", "value": 7.0}
+      ],
+      "required_conditions": 2,
+      "impact": "Prioridade em jogos com defesas fracas no garrafão"
+    },
+    "FLOOR_GENERALS": {
+      "description": "Armadores criadores (PG com alto ast%)",
+      "conditions": [
+        {"stat": "position", "operator": "in", "value": ["PG", "G"]},
+        {"stat": "ast_per_min", "operator": ">=", "value": 0.15},
+        {"stat": "ast_L5", "operator": ">=", "value": 6.0},
+        {"stat": "ast_cv", "operator": "<=", "value": 0.6}
+      ],
+      "required_conditions": 2,
+      "impact": "Valor em jogos de ritmo alto e com bons finalizadores"
+    },
+    "SHOOTERS_LINES": {
+      "description": "Arremessadores de volume (SG/SF com alto pts)",
+      "conditions": [
+        {"stat": "position", "operator": "in", "value": ["SG", "SF", "G", "F"]},
+        {"stat": "pts_per_min", "operator": ">=", "value": 0.5},
+        {"stat": "pts_L5", "operator": ">=", "value": 15.0},
+        {"stat": "usage", "operator": "=", "value": "high"}
+      ],
+      "required_conditions": 2,
+      "impact": "Excelentes em shootouts e contra defesas permissivas"
+    },
+    "ALL_AROUND_STARS": {
+      "description": "Estrelas completas (alta PRA + minutos)",
+      "conditions": [
+        {"stat": "pra_L5", "operator": ">=", "value": 30.0},
+        {"stat": "min_L5", "operator": ">=", "value": 32.0},
+        {"stat": "role", "operator": "in", "value": ["star", "starter"]},
+        {"stat": "pra_cv", "operator": "<=", "value": 0.5}
+      ],
+      "required_conditions": 3,
+      "impact": "Base sólida para qualquer trixie, porém caros"
+    },
+    "BENCH_BOMBS": {
+      "description": "Reservas com upside (alto PRA/min em bench)",
+      "conditions": [
+        {"stat": "role", "operator": "in", "value": ["bench_scorer", "rotation"]},
+        {"stat": "pra_per_min", "operator": ">=", "value": 0.8},
+        {"stat": "expected_minutes", "operator": "between", "value": [15, 28]},
+        {"stat": "volatility", "operator": "=", "value": "medium"}
+      ],
+      "required_conditions": 2,
+      "impact": "Value plays em DFS, upside em garbage time"
+    },
+    "SAFE_PLAYS": {
+      "description": "Jogadores consistentes (baixa volatilidade)",
+      "conditions": [
+        {"stat": "min_cv", "operator": "<=", "value": 0.4},
+        {"stat": "pra_cv", "operator": "<=", "value": 0.5},
+        {"stat": "expected_minutes", "operator": ">=", "value": 25.0},
+        {"stat": "consistency_score", "operator": ">=", "value": 70}
+      ],
+      "required_conditions": 3,
+      "impact": "Base segura para trixies de baixo risco"
+    },
+    "GARBAGE_KINGS": {
+      "description": "Especialistas em garbage time (jovens/reservas)",
+      "conditions": [
+        {"stat": "is_young", "operator": "=", "value": true},
+        {"stat": "garbage_time_profile", "operator": "=", "value": "high"},
+        {"stat": "role", "operator": "in", "value": ["rotation", "deep_bench"]},
+        {"stat": "pra_per_min", "operator": ">=", "value": 0.7}
+      ],
+      "required_conditions": 2,
+      "impact": "Upside em blowouts, especialmente spreads > 12"
+    }
+  },
+  "scoring_rules": {
+    "class_weight_in_score": 0.15,
+    "multiple_classes_boost": 0.05,
+    "strategic_class_bonus": {
+      "GLASS_BANGERS": {"vs": "weak_rebound_defense", "boost": 0.20},
+      "FLOOR_GENERALS": {"vs": "fast_pace", "boost": 0.18},
+      "SHOOTERS_LINES": {"vs": "high_total", "boost": 0.15},
+      "GARBAGE_KINGS": {"vs": "high_spread", "boost": 0.25},
+      "BENCH_BOMBS": {"vs": "injury_context", "boost": 0.22}
+    }
+  }
+}

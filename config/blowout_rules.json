@@ -1,0 +1,65 @@
+{
+  "blowout_thresholds": {
+    "spread_threshold": 12.0,
+    "high_spread_threshold": 14.5,
+    "extreme_spread_threshold": 18.0,
+    "pace_multiplier_threshold": 1.05,
+    "total_threshold": 230
+  },
+  "garbage_time_rules": {
+    "minutes_cap_starters": 32,
+    "minutes_cap_stars": 28,
+    "minutes_boost_bench": 8,
+    "minutes_boost_young": 12,
+    "garbage_time_starts_q4": 8,
+    "garbage_time_starts_spread": 20
+  },
+  "player_profiles_for_blowouts": {
+    "high_priority": [
+      {"condition": "is_young = true AND role = rotation", "boost": 1.25},
+      {"condition": "garbage_time_profile = high", "boost": 1.30},
+      {"condition": "pra_per_min > 0.8 AND expected_minutes < 25", "boost": 1.20},
+      {"condition": "position = SG OR position = SF", "boost": 1.15}
+    ],
+    "medium_priority": [
+      {"condition": "role = deep_bench", "boost": 1.10},
+      {"condition": "exp <= 2", "boost": 1.12},
+      {"condition": "volatility = high", "boost": 1.08}
+    ],
+    "low_priority": [
+      {"condition": "is_veteran = true", "boost": 0.85},
+      {"condition": "role = star", "boost": 0.70},
+      {"condition": "expected_minutes > 32", "boost": 0.80}
+    ]
+  },
+  "trixie_strategies_for_blowouts": {
+    "BENCH_MOB": {
+      "description": "Trio de reservas com upside em garbage time",
+      "player_count": 3,
+      "required_classes": ["BENCH_BOMBS", "GARBAGE_KINGS"],
+      "min_classes": 2,
+      "score_boost": 1.25
+    },
+    "YOUNG_GUNS": {
+      "description": "Jovens talentos que ganham minutos extras",
+      "player_count": 3,
+      "required_conditions": ["is_young = true", "garbage_time_profile = high"],
+      "min_conditions": 2,
+      "score_boost": 1.20
+    },
+    "VOLUME_VULTURES": {
+      "description": "Jogadores que herdam volume em blowouts",
+      "player_count": 2,
+      "required_conditions": ["usage = medium", "role = rotation"],
+      "score_boost": 1.15
+    }
+  },
+  "scoring_adjustments": {
+    "base_blowout_multiplier": 1.0,
+    "spread_adjustment_rate": 0.02,
+    "pace_adjustment_rate": 0.015,
+    "total_adjustment_rate": 0.01,
+    "max_blowout_multiplier": 1.35,
+    "min_blowout_multiplier": 0.85
+  }
+}

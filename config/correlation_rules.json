@@ -1,0 +1,46 @@
+{
+  "class_conflicts": {
+    "multiple_GLASS_BANGERS_same_team": {
+      "description": "Evitar múltiplos reboteadores do mesmo time",
+      "max_count": 1,
+      "penalty": -0.10
+    },
+    "multiple_FLOOR_GENERALS_same_team": {
+      "description": "Evitar múltiplos armadores do mesmo time",
+      "max_count": 1,
+      "penalty": -0.08
+    },
+    "too_many_GARBAGE_KINGS": {
+      "description": "Muitos especialistas em garbage time pode ser arriscado",
+      "max_count": 2,
+      "penalty": -0.12
+    },
+    "ALL_AROUND_STARS_with_BENCH_BOMBS": {
+      "description": "Estrelas com reservas pode criar conflito de minutos",
+      "penalty": -0.07
+    }
+  },
+  "class_synergies": {
+    "GLASS_BANGERS_with_FLOOR_GENERALS": {
+      "description": "Reboteador + Armador = segunda chances",
+      "bonus": 0.12
+    },
+    "FLOOR_GENERALS_with_SHOOTERS_LINES": {
+      "description": "Criador + Finalizador = combinação clássica",
+      "bonus": 0.15
+    },
+    "BENCH_BOMBS_with_GARBAGE_KINGS": {
+      "description": "Reservas com upside em blowouts",
+      "bonus": 0.10
+    }
+  },
+  "positional_balance": {
+    "ideal_distribution": {
+      "guards": "1-2",
+      "forwards": "1-2", 
+      "centers": "0-1"
+    },
+    "max_same_position": 2,
+    "positional_diversity_bonus": 0.08
+  }
+}
