@@ -1,0 +1,83 @@
+"""
+rotation_ceiling_engine.py
+
+Módulo para calcular probabilidades de teto (ceiling) e avaliar contexto de rotação.
+Projetado para ser integrado ao StrategicSystem ou chamado isoladamente.
+
+Funções principais:
+- calculate_ceiling_probabilities(player_stats, game_ctx)
+- evaluate_rotation_context(player_data, injury_report, lineup_info, team_context)
+"""
+
+from typing import Dict, Any, Tuple
+import math
+import statistics
+
+# -------------------------
+# Configurações ajustáveis
+# -------------------------
+DEFAULT_PACE_THRESHOLD = 100.0
+DEFAULT_SPREAD_BLOWOUT = 12.0
+MIN_GAMES_HISTORY = 8  # mínimo de jogos para confiar 100% no histórico
+CEILING_BASE_WEIGHT = 0.6  # peso do histórico na probabilidade final
+CONTEXT_WEIGHT = 0.4       # peso do contexto (pace, spread, injuries)
+MIN_PROB = 0.01
+MAX_PROB = 0.99
+
+# Ajustes por role
+ROLE_MINUTES_THRESHOLDS = {
+    "starter": 25,
+    "rotation": 18,
+    "bench": 12,
+    "deep_bench": 0
+}
+
+# -------------------------
+# Helpers internos
+# -------------------------
+def _clamp(v: float, lo: float = MIN_PROB, hi: float = MAX_PROB) -> float:
+    return max(lo, min(hi, v))
+
+def _percentile_to_prob(percentile90: float) -> float:
+    """
+    Converte um valor de percentil histórico (0-1) para probabilidade base.
+    Espera percentile90 como fração (ex.: 0.6 significa que o jogador alcança o 90º percentil 60% das vezes historicamente).
+    """
+    if percentile90 is None:
+        return 0.2
+    return _clamp(percentile90)
+
+def _games_confidence(num_games: int) -> float:
+    """
+    Retorna um multiplicador de confiança baseado no número de jogos históricos disponíveis.
+    """
+    if num_games >= 30:
+        return 1.0
+    if num_games >= 15:
+        return 0.9
+    if num_games >= MIN_GAMES_HISTORY:
+        return 0.75
+    return 0.5
+
+# -------------------------
+# Funções públicas
+# -------------------------
+def calculate_ceiling_probabilities(player_stats: Dict[str, Any], game_ctx: Dict[str, Any]) -> Dict[str, float]:
+    """
+    Calcula probabilidades de teto para PTS, REB, AST, PRA.
+
+    player_stats deve conter (quando possível):
+      - pts_percentile90, reb_percentile90, ast_percentile90, pra_percentile90 (valores 0-1)
+      - games_sample (int)
+      - recent_trend (dict) opcional com chaves 'pts', 'reb', 'ast', 'pra' com multiplicadores (ex.: 1.1)
+      - expected_minutes (float) opcional
+
+    game_ctx deve conter (quando possível):
+      - pace_expected (float)
+      - spread_abs (float)
+      - dvp_adjust (dict) com chaves 'pts','reb','ast','pra' multiplicadores de matchup
+      - lineup_shock (bool) se houver mudança de rotação esperada
+    """
+    # Base histórico
+    games_sample = player_stats.get("games_sample", 0)
+    confidence = _games_confidence
