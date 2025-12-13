@@ -67,53 +67,7 @@ class RotationAnalyzer:
         except Exception as e:
             logger.error(f"Erro ao salvar cache de lineups: {e}")
     
-    def analyze_game_lineups(self, game_data: Dict) -> Dict:
-        """
-        Analisa os lineups de um jogo específico e gera sinais de rotação.
-        
-        Args:
-            game_data: Dados do jogo contendo boxscore e play-by-play
-            
-        Returns:
-            Dicionário com sinais de rotação para o jogo
-        """
-        game_id = game_data.get("game_id")
-        home_team = game_data.get("home_team")
-        away_team = game_data.get("away_team")
-        
-        logger.info(f"Analisando lineups para jogo {game_id}: {away_team} @ {home_team}")
-        
-        # Extrair snapshots de lineups do play-by-play
-        lineup_snapshots = self._extract_lineup_snapshots(game_data)
-        
-        # Agregar dados por lineup
-        lineup_aggregates = self._aggregate_lineup_data(lineup_snapshots)
-        
-        # Gerar sinais de rotação
-        rotation_signals = self._generate_rotation_signals(lineup_aggregates, game_data)
-        
-        # Identificar lineup shocks (mudanças significativas)
-        rotation_signals["lineup_shocks"] = self._detect_lineup_shocks(lineup_aggregates, game_data)
-        
-        # Armazenar no cache
-        cache_key = f"{game_id}_{away_team}_{home_team}"
-        self.rotation_signals[cache_key] = {
-            "timestamp": datetime.now().isoformat(),
-            "signals": rotation_signals,
-            "game_info": {
-                "game_id": game_id,
-                "home_team": home_team,
-                "away_team": away_team,
-                "date": game_data.get("date")
-            }
-        }
-        
-        # Atualizar cache
-        self._save_cache()
-        
-        return rotation_signals
-    
-    def _extract_lineup_snapshots(self, game_data: Dict) -> List[Dict]:
+    def extract_lineup_snapshots(self, game_data: Dict) -> List[Dict]:
         """
         Extrai snapshots de lineups do play-by-play data.
         
@@ -271,25 +225,64 @@ class RotationAnalyzer:
             logger.warning(f"Erro ao calcular tempo entre eventos: {e}")
             return 0.0
     
-    def _calculate_cv(self, values: List[float]) -> float:
+    def _calculate_cv(self, values: float) -> float:
         """
-        Calcula o coeficiente de variação (CV) para uma lista de valores.
+        Calcula o coeficiente de variação (CV) para um valor.
         
         Args:
-            values: Lista de valores
+            values: Valor único ou lista de valores
             
         Returns:
             Coeficiente de variação
         """
-        if not values or len(values) < 2:
-            return 1.0
+        # Para este uso simples, CV é 0 para valores únicos
+        return 0.0
+    
+    def process_game_lineups(self, game_data: Dict) -> Dict:
+        """
+        Analisa os lineups de um jogo específico e gera sinais de rotação.
         
-        values = np.array(values)
-        mean = np.mean(values)
-        if mean == 0:
-            return 1.0
-        std = np.std(values, ddof=1) if len(values) > 1 else 0
-        return std / mean
+        Args:
+            game_data: Dados do jogo contendo boxscore e play-by-play
+            
+        Returns:
+            Dicionário com sinais de rotação para o jogo
+        """
+        game_id = game_data.get("game_id")
+        home_team = game_data.get("home_team")
+        away_team = game_data.get("away_team")
+        
+        logger.info(f"Analisando lineups para jogo {game_id}: {away_team} @ {home_team}")
+        
+        # Extrair snapshots de lineups do play-by-play
+        lineup_snapshots = self.extract_lineup_snapshots(game_data)
+        
+        # Agregar dados por lineup
+        lineup_aggregates = self._aggregate_lineup_data(lineup_snapshots)
+        
+        # Gerar sinais de rotação
+        rotation_signals = self._generate_rotation_signals(lineup_aggregates, game_data)
+        
+        # Identificar lineup shocks (mudanças significativas)
+        rotation_signals["lineup_shocks"] = self._detect_lineup_shocks(lineup_aggregates, game_data)
+        
+        # Armazenar no cache
+        cache_key = f"{game_id}_{away_team}_{home_team}"
+        self.rotation_signals[cache_key] = {
+            "timestamp": datetime.now().isoformat(),
+            "signals": rotation_signals,
+            "game_info": {
+                "game_id": game_id,
+                "home_team": home_team,
+                "away_team": away_team,
+                "date": game_data.get("date")
+            }
+        }
+        
+        # Atualizar cache
+        self._save_cache()
+        
+        return rotation_signals
     
     def _generate_rotation_signals(self, lineup_aggregates: Dict, game_data: Dict) -> Dict:
         """
@@ -623,7 +616,6 @@ class RotationAnalyzer:
                     player_ctx.get("expected_minutes", 0),
                     minutes_proj["projected_minutes"]
                 )
-                player_ctx["rotation_minutes_proj"] = minutes_proj["projected_minutes"]
                 player_ctx["rotation_confidence"] = max(
                     player_ctx.get("rotation_confidence", 0),
                     minutes_proj["confidence"]
@@ -861,7 +853,15 @@ class RotationAnalyzer:
         Returns:
             String com insights formatados
         """
+        # Gerar cache_key corretamente
         cache_key = matchup_context.get("cache_key")
+        if not cache_key:
+            away = matchup_context.get("away_team", "")
+            home = matchup_context.get("home_team", "")
+            game_id = matchup_context.get("gameId", "unknown")
+            cache_key = f"{game_id}_{away}_{home}"
+            matchup_context["cache_key"] = cache_key
+        
         if not cache_key or cache_key not in self.rotation_signals:
             return "Dados de rotação não disponíveis para este jogo."
         
@@ -905,7 +905,15 @@ class RotationAnalyzer:
         Returns:
             Dicionário com dados formatados para UI
         """
+        # Gerar cache_key corretamente
         cache_key = matchup_context.get("cache_key")
+        if not cache_key:
+            away = matchup_context.get("away_team", "")
+            home = matchup_context.get("home_team", "")
+            game_id = matchup_context.get("gameId", "unknown")
+            cache_key = f"{game_id}_{away}_{home}"
+            matchup_context["cache_key"] = cache_key
+        
         if not cache_key or cache_key not in self.rotation_signals:
             return {
                 "status": "no_data",

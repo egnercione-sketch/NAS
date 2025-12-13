@@ -1,5 +1,5 @@
 """
-Correlation Filters Module (FASE 4 Lite)
+Correlation Filters Module
 Filtra combinações ruins em trixies
 """
 
