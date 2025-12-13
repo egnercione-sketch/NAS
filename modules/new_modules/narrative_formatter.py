@@ -1,643 +1,538 @@
 # modules/new_modules/narrative_formatter.py
 """
-Narrative Formatter - Formatação de Narrativas Explicativas
-Transforma recomendações em narrativas textuais claras e explicativas
+NarrativeFormatter - Módulo para formatar recomendações em narrativas textuais explicativas
+com templates específicos para cada estratégia.
 """
-
 import pandas as pd
-from typing import Dict, List, Optional, Tuple, Any
+from typing import Dict, List, Optional
+import logging
 from datetime import datetime
 
+logger = logging.getLogger(__name__)
+
 class NarrativeFormatter:
-    """
-    Formata recomendações em narrativas textuais explicativas
-    """
-    
-    def __init__(self, config: Optional[Dict] = None):
-        """Inicializa o formatador de narrativas"""
-        self.config = config or {}
-        
-        # Templates de narrativa por categoria
-        self.narrative_templates = {
-            'conservadora': {
-                'title': "🎯 Trixie Conservadora (Safe Play)",
-                'intro': "Aposta segura com baixa volatilidade, foco em titulares com matchup favorável.",
-                'template': """**{player}** ({position} - {archetype})
-📊 Mercado: **{market_line}**
-⚖️ Confiança: **{confidence}** {confidence_emoji}
-📈 Tese: {thesis_explanation}
-🎯 Estratégia: {strategy_description}
-✅ Validação: {validation_summary}
-👉 Narrativa: "{narrative_text}""""
-            },
-            'ousada': {
-                'title': "🚀 Trixie Ousada (Upside Play)",
-                'intro': "Maior risco, maior retorno potencial. Foco em upside e situações específicas.",
-                'template': """**{player}** ({position} - {archetype})
-📊 Mercado: **{market_line}**
-⚖️ Confiança: **{confidence}** {confidence_emoji}
-📈 Tese: {thesis_explanation}
-🎯 Estratégia: {strategy_description}
-✅ Validação: {validation_summary}
-👉 Narrativa: "{narrative_text}""""
-            },
-            'banco': {
-                'title': "💰 Trixie Banco (Value Hunter)",
-                'intro': "Aposta no banco com bom custo-benefício, foco em reservas com upside.",
-                'template': """**{player}** ({position} - {archetype})
-📊 Mercado: **{market_line}**
-⚖️ Confiança: **{confidence}** {confidence_emoji}
-📈 Tese: {thesis_explanation}
-🎯 Estratégia: {strategy_description}
-✅ Validação: {validation_summary}
-👉 Narrativa: "{narrative_text}""""
-            },
-            'explosao': {
-                'title': "⚡ Trixie Explosão (Boost Play)",
-                'intro': "Situações específicas de alto potencial, ativadas por contexto do jogo.",
-                'template': """**{player}** ({position} - {archetype})
-📊 Mercado: **{market_line}**
-⚖️ Confiança: **{confidence}** {confidence_emoji}
-📈 Tese: {thesis_explanation}
-🎯 Estratégia: {strategy_description}
-✅ Validação: {validation_summary}
-👉 Narrativa: "{narrative_text}""""
-            }
+    def __init__(self):
+        self.templates = self._load_templates()
+        self.color_codes = {
+            "conservadora": "#2E7D32",  # Verde
+            "ousada": "#D84315",         # Laranja
+            "banco": "#1565C0",          # Azul
+            "explosao": "#6A1B9A"        # Roxo
         }
         
-        # Mapeamento de emojis para confiança
-        self.confidence_emojis = {
-            'very_high': '🟢🟢🟢',
-            'high': '🟢🟢⚪',
-            'medium': '🟡🟡⚪',
-            'low': '🔴🔴⚪'
-        }
-        
-        # Explicações de teses
-        self.thesis_explanations = {
-            'BigRebound': "Jogador dominante no garrafão com matchup favorável para rebotes",
-            'AssistMatchup': "Armador com alto AST% em jogo competitivo e defesa vulnerável",
-            'ScorerLine': "Scorer de volume contra defesa fraca no perímetro",
-            'ValueHunter': "Reserva com bom valor PRA/min e minutos crescentes",
-            'PaceBoost': "Jogador beneficiado pelo ritmo acelerado do jogo",
-            'BlowoutRisk': "Alerta de risco por possível blowout"
-        }
-        
-        # Templates de narrativa textual
-        self.narrative_text_templates = {
-            'BigRebound': [
-                "Entrar em {market_line} para {player}, que domina o garrafão contra defesa vulnerável e reforça teses de rebote.",
-                "{player} tem matchup favorável para explorar rebotes, com ritmo de jogo acelerado ajudando.",
-                "Aposta conservadora em {player} para rebotes, aproveitando defesa frágil no garrafão adversário."
-            ],
-            'AssistMatchup': [
-                "Explorar {market_line} de {player} em jogo parelho, reforçando teses de criação ofensiva.",
-                "{player} como principal criador em jogo competitivo, com defesa adversária permitindo assistências.",
-                "Aposta em {player} para assistências extras em jogo com ritmo acelerado e defesa vulnerável."
-            ],
-            'ScorerLine': [
-                "{player} como opção sólida para {market_line}, explorando defesa fraca no perímetro.",
-                "Scorer de volume em boa fase, com matchup favorável para pontuação contra {team}.",
-                "Entrar em {market_line} para {player}, que tem USG% alto e defesa adversária frágil."
-            ],
-            'ValueHunter': [
-                "Colocar um dinheirinho em {player}, reserva com perfil de garbage time e upside em {market}.",
-                "Value play em {player}, que vem mostrando bom aproveitamento de minutos como reserva.",
-                "Aposta no banco com {player}, que tem PRA/min alto e pode se beneficiar de minutos extras."
-            ],
-            'PaceBoost': [
-                "Apostar em {player} para {market_line} extras em jogo acelerado e parelho, reforçando teses de pace.",
-                "{player} se beneficia do ritmo alto, com histórico de bom desempenho em jogos rápidos.",
-                "Explorar o pace acelerado com {player}, que tem perfil ideal para jogos de transição."
-            ]
-        }
-        
-        # Mapeamento de posições para nomes completos
-        self.position_names = {
-            'PG': 'Armador',
-            'SG': 'Ala-armador',
-            'SF': 'Ala',
-            'PF': 'Ala-pivô',
-            'C': 'Pivô'
-        }
-    
-    def get_confidence_level(self, confidence: float) -> Tuple[str, str]:
-        """Determina nível e emoji de confiança"""
-        if confidence >= 0.75:
-            return 'very_high', self.confidence_emojis['very_high']
-        elif confidence >= 0.65:
-            return 'high', self.confidence_emojis['high']
-        elif confidence >= 0.55:
-            return 'medium', self.confidence_emojis['medium']
-        else:
-            return 'low', self.confidence_emojis['low']
-    
-    def format_market_line(self, recommendation: Dict) -> str:
-        """Formata a linha de mercado"""
-        market = recommendation['market']
-        suggested_line = recommendation.get('suggested_line', '')
-        
-        if market == 'PTS':
-            return f"{suggested_line} pontos"
-        elif market == 'REB':
-            return f"{suggested_line} rebotes"
-        elif market == 'AST':
-            return f"{suggested_line} assistências"
-        elif market == 'PRA':
-            return f"{suggested_line} PRA"
-        elif market == 'REB+AST':
-            reb_line = recommendation.get('suggested_reb_line', '')
-            ast_line = recommendation.get('suggested_ast_line', '')
-            return f"{reb_line} rebotes + {ast_line} assistências"
-        elif market == 'PTS+REB':
-            pts_line = recommendation.get('suggested_pts_line', '')
-            reb_line = recommendation.get('suggested_reb_line', '')
-            return f"{pts_line} pontos + {reb_line} rebotes"
-        else:
-            return f"{suggested_line} {market}"
-    
-    def generate_narrative_text(self, recommendation: Dict, game_ctx: Dict) -> str:
-        """Gera o texto narrativo para uma recomendação"""
-        thesis_type = recommendation['thesis_type']
-        player = recommendation['player']
-        market_line = self.format_market_line(recommendation)
-        
-        # Seleciona template baseado na tese
-        templates = self.narrative_text_templates.get(thesis_type, [])
-        if not templates:
-            # Template padrão
-            return f"Entrar em {market_line} para {player}, reforçando teses de {thesis_type}."
-        
-        # Seleciona template aleatório para variedade
-        import random
-        template = random.choice(templates)
-        
-        # Adiciona contexto específico
-        narrative = template.format(
-            player=player,
-            market_line=market_line,
-            market=recommendation['market'],
-            team=game_ctx.get('opponent_team', 'o adversário')
-        )
-        
-        # Adiciona detalhes específicos se disponíveis
-        adjustments = recommendation.get('adjustments', [])
-        if adjustments:
-            # Extrai apenas os ajustes positivos/negativos
-            bonuses = [a for a in adjustments if 'Bônus' in a]
-            penalties = [a for a in adjustments if 'Penalidade' in a]
-            
-            if bonuses:
-                bonus_reason = bonuses[0].split(': ')[1] if ': ' in bonuses[0] else ''
-                narrative += f" {bonus_reason}"
-            elif penalties:
-                narrative += " Atenção para fatores de risco."
-        
-        return narrative
-    
-    def format_thesis_explanation(self, recommendation: Dict) -> str:
-        """Formata a explicação da tese"""
-        thesis_type = recommendation['thesis_type']
-        base_explanation = self.thesis_explanations.get(thesis_type, thesis_type)
-        
-        # Adiciona evidências se disponíveis
-        evidences = recommendation.get('evidences', [])
-        if evidences:
-            # Limita a 2 evidências principais
-            key_evidences = evidences[:2]
-            evidence_text = '; '.join(key_evidences)
-            return f"{base_explanation}. ({evidence_text})"
-        
-        return base_explanation
-    
-    def format_validation_summary(self, recommendation: Dict) -> str:
-        """Formata o resumo da validação"""
-        adjustments = recommendation.get('adjustments', [])
-        score_adjustment = recommendation.get('score_adjustment', 0)
-        
-        if not adjustments:
-            return "✅ Validação OK, sem violações críticas"
-        
-        # Separa bônus e penalidades
-        bonuses = [a for a in adjustments if 'Bônus' in a]
-        penalties = [a for a in adjustments if 'Penalidade' in a]
-        
-        summary_parts = []
-        
-        if bonuses:
-            bonus_count = len(bonuses)
-            summary_parts.append(f"✅ {bonus_count} bônus aplicados")
-        
-        if penalties:
-            penalty_count = len(penalties)
-            summary_parts.append(f"⚠️ {penalty_count} penalizações")
-        
-        if score_adjustment > 0:
-            summary_parts.append(f"📈 Score ajustado +{score_adjustment*100:.0f}%")
-        elif score_adjustment < 0:
-            summary_parts.append(f"📉 Score ajustado {score_adjustment*100:.0f}%")
-        
-        return "; ".join(summary_parts) if summary_parts else "Validação padrão"
-    
-    def get_archetype_display(self, player_ctx: Dict) -> str:
-        """Obtém o archetype para display"""
-        player_class = player_ctx.get('player_class', '')
-        
-        # Mapeamento de classes para archetypes mais amigáveis
-        archetype_map = {
-            'GLASS_BANGER': 'Dominador do Garrafão',
-            'FLOOR_GENERAL': 'General de Quadra',
-            'SCORER': 'Scorer de Volume',
-            'SHOOTER': 'Arremessador',
-            'DEFENSIVE_ANCHOR': 'Âncora Defensiva',
-            'PLAYMAKER': 'Criador de Jogo',
-            'ALL_AROUND': 'Completo',
-            'CLUTCH': 'Clutch',
-            'BENCH_SPARK': 'Faísca do Banco',
-            'YOUNG': 'Jovem Talento',
-            'VETERAN': 'Veterano',
-            'ATHLETIC': 'Atlético',
-            'TRANSITION': 'Jogador de Transição'
-        }
-        
-        # Pega a primeira classe e mapeia
-        if player_class:
-            classes = player_class.split(';')
-            first_class = classes[0].strip()
-            return archetype_map.get(first_class, first_class)
-        
-        return 'Perfil Padrão'
-    
-    def format_recommendation(self, recommendation: Dict, game_ctx: Dict, 
-                            category: str) -> Dict[str, Any]:
-        """Formata uma recomendação individual"""
-        # Obtém contexto do jogador
-        player_ctx = recommendation.get('player_ctx', {})
-        
-        # Prepara os dados para o template
-        position = player_ctx.get('pos', '')
-        position_display = self.position_names.get(position, position)
-        
-        archetype = self.get_archetype_display(player_ctx)
-        market_line = self.format_market_line(recommendation)
-        
-        # Usa confiança ajustada se disponível
-        confidence = recommendation.get('adjusted_confidence', recommendation['confidence'])
-        confidence_level, confidence_emoji = self.get_confidence_level(confidence)
-        
-        thesis_explanation = self.format_thesis_explanation(recommendation)
-        strategy_description = recommendation.get('strategy_description', 'Estratégia personalizada')
-        validation_summary = self.format_validation_summary(recommendation)
-        narrative_text = self.generate_narrative_text(recommendation, game_ctx)
-        
-        # Formata usando template da categoria
-        template_data = {
-            'player': recommendation['player'],
-            'position': position_display,
-            'archetype': archetype,
-            'market_line': market_line,
-            'confidence': f"{confidence:.0%}",
-            'confidence_emoji': confidence_emoji,
-            'thesis_explanation': thesis_explanation,
-            'strategy_description': strategy_description,
-            'validation_summary': validation_summary,
-            'narrative_text': narrative_text,
-            'team': player_ctx.get('team', ''),
-            'role': player_ctx.get('role', '').capitalize()
-        }
-        
-        # Aplica ao template
-        category_template = self.narrative_templates[category]['template']
-        formatted_text = category_template.format(**template_data)
-        
+    def _load_templates(self) -> Dict:
+        """Carrega templates de narrativa para cada estratégia."""
         return {
-            'title': self.narrative_templates[category]['title'],
-            'intro': self.narrative_templates[category]['intro'],
-            'formatted_text': formatted_text,
-            'raw_data': recommendation,
-            'metadata': {
-                'player': recommendation['player'],
-                'market': recommendation['market'],
-                'confidence': confidence,
-                'thesis': recommendation['thesis_type'],
-                'strategy': recommendation.get('identified_strategy', ''),
-                'category': category
+            "conservadora": {
+                "title": "🎯 JOGO CONSERVADOR",
+                "subtitle": "Titulares com baixa volatilidade e alta confiança",
+                "introduction": "Esta estratégia foca em **titulares estabelecidos** com histórico consistente e matchups favoráveis. Ideal para construir uma base sólida de apostas.",
+                "player_template": "**{name}** ({position}) - Confiança: **{confidence}%**\n\n📊 *{primary_thesis}*: {motives}\n\n📈 Estatísticas Projetadas: {stats_summary}\n\n🔍 {additional_evidence}",
+                "closing": "Esta seleção oferece a melhor relação risco-retorno para apostadores que preferem segurança e consistência."
+            },
+            "ousada": {
+                "title": "⚡ APOSTA OUSADA",
+                "subtitle": "Alto teto estatístico e potencial explosivo",
+                "introduction": "Estratégia focada em jogadores com **potencial de superação**, seja por matchup extremamente favorável, aumento de minutos ou contexto de jogo.",
+                "player_template": "**{name}** ({position}) - Potencial: **{upside_score}/10**\n\n⚡ *{primary_thesis}*: {motives}\n\n🚀 Fatores de Explosão: {explosion_factors}\n\n🎯 Projeção Otimista: {optimistic_projection}\n\n⚠️ Riscos: {risks}",
+                "closing": "Recomendado para apostadores dispostos a assumir mais risco em troca de retornos potencialmente maiores."
+            },
+            "banco": {
+                "title": "💰 CAÇA VALOR",
+                "subtitle": "Reservas com boa relação custo-benefício",
+                "introduction": "Foco em jogadores de **banco ou rotation** que podem superar expectativas devido a matchups favoráveis, garbage time ou aumento de oportunidades.",
+                "player_template": "**{name}** ({position}) - Valor: **{value_score}/10**\n\n💰 *{primary_thesis}*: {motives}\n\n📊 Estatísticas por Minuto: {per_minute_stats}\n\n🎪 Contexto de Oportunidade: {opportunity_context}\n\n📈 Razão Custo-Benefício: {value_ratio}",
+                "closing": "Ideal para apostas de valor onde o mercado pode estar subestimando o potencial do jogador."
+            },
+            "explosao": {
+                "title": "🚀 FATOR EXPLOSIVO",
+                "subtitle": "Contextos situacionais e fatores inesperados",
+                "introduction": "Estratégia que capitaliza em **eventos imprevisíveis** como lesões, mudanças de escalação, ritmo extremo ou condições específicas do jogo.",
+                "player_template": "**{name}** ({position}) - Impacto: **{impact_score}/10**\n\n🚀 *{primary_thesis}*: {motives}\n\n💥 Fatores Situacionais: {situational_factors}\n\n🎭 Elemento Surpresa: {surprise_element}\n\n⚡ Projeção no Cenário Ideal: {best_case}",
+                "closing": "Para apostadores que buscam capitalizar em situações únicas e potencialmente mal precificadas pelo mercado."
             }
         }
     
-    def format_all_recommendations(self, recommendations: Dict[str, List[Dict]], 
-                                 game_ctx: Dict) -> Dict[str, List[Dict]]:
-        """Formata todas as recomendações por categoria"""
-        formatted = {}
+    def format_recommendations(self, strategy_recommendations: Dict, matchup_context: Dict) -> Dict:
+        """
+        Formata todas as recomendações em narrativas textuais.
         
-        for category, recs in recommendations.items():
-            formatted[category] = []
+        Args:
+            strategy_recommendations: Dict com recomendações por categoria do StrategyEngine
+            matchup_context: Contexto do confronto
             
-            for rec in recs:
-                formatted_rec = self.format_recommendation(rec, game_ctx, category)
-                formatted[category].append(formatted_rec)
+        Returns:
+            Dict com narrativas formatadas por categoria
+        """
+        formatted_narratives = {}
         
-        return formatted
-    
-    def format_multipla_dia(self, multipla_recommendations: Dict[str, List[Dict]], 
-                          game_ctx: Dict) -> Dict[str, Dict]:
-        """Formata as múltiplas do dia"""
-        formatted = {}
-        
-        for multipla_type, recs in multipla_recommendations.items():
-            if not recs:
+        for category, recommendations in strategy_recommendations.items():
+            if not recommendations:
+                formatted_narratives[category] = self._format_empty_narrative(category)
                 continue
             
-            # Ordena por confiança ajustada
-            sorted_recs = sorted(
-                recs,
-                key=lambda x: x.get('adjusted_confidence', x['confidence']),
-                reverse=True
+            # Formatar narrativa principal da categoria
+            narrative = self._format_category_narrative(
+                category=category,
+                recommendations=recommendations,
+                matchup_context=matchup_context
             )
             
-            # Formata cada recomendação
-            formatted_recs = []
-            for rec in sorted_recs:
-                # Usa categoria correspondente para a formatação
-                category = 'conservadora' if multipla_type == 'conservadora' else 'ousada'
-                formatted_rec = self.format_recommendation(rec, game_ctx, category)
-                formatted_recs.append(formatted_rec)
+            # Formar narrativas individuais dos jogadores
+            player_narratives = []
+            for rec in recommendations:
+                player_narrative = self._format_player_narrative(rec, category, matchup_context)
+                player_narratives.append(player_narrative)
             
-            # Cria cabeçalho da múltipla
-            header = self._create_multipla_header(multipla_type, formatted_recs, game_ctx)
-            
-            formatted[multipla_type] = {
-                'header': header,
-                'recommendations': formatted_recs,
-                'summary': self._create_multipla_summary(formatted_recs)
+            # Combinar tudo
+            formatted_narratives[category] = {
+                "overview": narrative,
+                "players": player_narratives,
+                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
+                "recommendation_count": len(recommendations),
+                "color": self.color_codes.get(category, "#000000")
             }
         
-        return formatted
+        return formatted_narratives
     
-    def _create_multipla_header(self, multipla_type: str, 
-                              recommendations: List[Dict], 
-                              game_ctx: Dict) -> str:
-        """Cria cabeçalho para a múltipla do dia"""
-        num_entries = len(recommendations)
-        avg_confidence = sum(r['metadata']['confidence'] for r in recommendations) / num_entries
+    def _format_category_narrative(self, category: str, recommendations: List, 
+                                  matchup_context: Dict) -> Dict:
+        """Formata a narrativa geral de uma categoria."""
+        template = self.templates[category]
         
-        if multipla_type == 'conservadora':
-            title = "🎯 MÚLTIPLA CONSERVADORA DO DIA"
-            description = f"{num_entries} entradas selecionadas para baixa volatilidade e confiança média de {avg_confidence:.0%}"
-        else:
-            title = "🚀 MÚLTIPLA OUSADA DO DIA"
-            description = f"{num_entries} entradas com maior upside e confiança média de {avg_confidence:.0%}"
+        # Calcular métricas agregadas
+        avg_confidence = sum(r.get('confidence', 0) for r in recommendations) / len(recommendations)
+        teams = set(r.get('team', '') for r in recommendations)
+        positions = [r.get('position', '') for r in recommendations]
         
-        # Adiciona contexto do jogo
-        home_team = game_ctx.get('home_team', '')
-        away_team = game_ctx.get('away_team', '')
-        spread = game_ctx.get('spread', 0)
-        total = game_ctx.get('total', 0)
-        pace = game_ctx.get('pace', 0)
+        # Estatísticas resumidas
+        total_pra = sum(r.get('stats', {}).get('pra_avg', 0) for r in recommendations)
+        avg_pra = total_pra / len(recommendations)
         
-        context_lines = [
-            f"**Confronto:** {away_team} @ {home_team}",
-            f"**Spread:** {spread} | **Total:** {total} | **Pace:** {pace}"
-        ]
+        # Contexto do matchup para inserir na narrativa
+        matchup_summary = self._format_matchup_summary(matchup_context)
         
-        context_text = " | ".join(context_lines)
-        
-        return f"""
-### {title}
-{description}
-
-{context_text}
+        narrative_text = f"""
+# {template['title']}
+*{template['subtitle']}*
 
 ---
+
+## 📋 Visão Geral
+{template['introduction']}
+
+**Matchup Atual:** {matchup_summary}
+
+**Composição da Estratégia:**
+- 🔢 **{len(recommendations)} jogadores** selecionados
+- 🎯 **Confiança média:** {avg_confidence:.1%}
+- 🏀 **PRA médio projetado:** {avg_pra:.1f}
+- 🏆 **Times representados:** {', '.join(sorted(teams))}
+- 🎮 **Posições:** {', '.join(sorted(set(positions)))}
+
+## 🎯 Recomendações
 """
+        
+        return {
+            "text": narrative_text,
+            "metrics": {
+                "avg_confidence": avg_confidence,
+                "team_diversity": len(teams),
+                "avg_pra": avg_pra,
+                "player_count": len(recommendations)
+            },
+            "matchup_context": matchup_summary
+        }
     
-    def _create_multipla_summary(self, recommendations: List[Dict]) -> str:
-        """Cria resumo estatístico da múltipla"""
+    def _format_player_narrative(self, player_data: Dict, category: str, 
+                                matchup_context: Dict) -> Dict:
+        """Formata narrativa individual para um jogador."""
+        template = self.templates[category]
+        
+        # Extrair dados do jogador
+        name = player_data.get('name', 'N/A')
+        position = player_data.get('position', 'N/A')
+        team = player_data.get('team', 'N/A')
+        confidence = player_data.get('confidence', 0) * 100
+        
+        # Processar tese primária
+        primary_thesis = player_data.get('primary_thesis', 'Sem tese identificada')
+        motives = self._extract_motives(player_data.get('theses', []))
+        
+        # Preparar dados específicos por categoria
+        formatted_data = {
+            "name": name,
+            "position": position,
+            "team": team,
+            "confidence": f"{confidence:.0f}",
+            "primary_thesis": primary_thesis,
+            "motives": motives
+        }
+        
+        # Adicionar campos específicos por categoria
+        if category == "conservadora":
+            formatted_data.update(self._format_conservadora_fields(player_data, matchup_context))
+        elif category == "ousada":
+            formatted_data.update(self._format_ousada_fields(player_data, matchup_context))
+        elif category == "banco":
+            formatted_data.update(self._format_banco_fields(player_data, matchup_context))
+        elif category == "explosao":
+            formatted_data.update(self._format_explosao_fields(player_data, matchup_context))
+        
+        # Gerar texto da narrativa
+        narrative_text = template["player_template"].format(**formatted_data)
+        
+        # Adicionar identificadores únicos
+        player_id = player_data.get('player_id', '')
+        
+        return {
+            "id": player_id,
+            "name": name,
+            "position": position,
+            "team": team,
+            "narrative": narrative_text,
+            "confidence": confidence,
+            "stats": player_data.get('stats', {}),
+            "raw_data": player_data  # Manter dados originais para referência
+        }
+    
+    def _format_conservadora_fields(self, player_data: Dict, context: Dict) -> Dict:
+        """Campos específicos para estratégia conservadora."""
+        stats = player_data.get('stats', {})
+        
+        # Resumo estatístico
+        stats_summary = f"{stats.get('pts_avg', 0):.1f} PTS, {stats.get('reb_avg', 0):.1f} REB, {stats.get('ast_avg', 0):.1f} AST"
+        
+        # Evidências adicionais
+        evidence = player_data.get('evidence', {})
+        matchup_info = evidence.get('matchup', {})
+        dvp_rank = matchup_info.get('dvp_rank', 'N/A')
+        
+        additional = []
+        if dvp_rank != 'N/A':
+            additional.append(f"DvP Rank: {dvp_rank}")
+        
+        role_factors = evidence.get('role_factors', {})
+        minutes_proj = role_factors.get('minutes_proj', 0)
+        if minutes_proj > 30:
+            additional.append(f"Minutos projetados: {minutes_proj:.0f}+")
+        
+        return {
+            "stats_summary": stats_summary,
+            "additional_evidence": "; ".join(additional) if additional else "Matchup favorável confirmado"
+        }
+    
+    def _format_ousada_fields(self, player_data: Dict, context: Dict) -> Dict:
+        """Campos específicos para estratégia ousada."""
+        # Calcular score de potencial
+        upside_factors = []
+        
+        stats = player_data.get('stats', {})
+        pra_avg = stats.get('pts_avg', 0) + stats.get('reb_avg', 0) + stats.get('ast_avg', 0)
+        
+        if pra_avg > 35:
+            upside_factors.append("PRA histórico alto")
+        
+        evidence = player_data.get('evidence', {})
+        situational = evidence.get('situational', {})
+        
+        if situational.get('pace_boost', False):
+            upside_factors.append("Ritmo acelerado")
+        
+        if situational.get('injury_boost', False):
+            upside_factors.append("Oportunidade por lesão")
+        
+        # Projeção otimista (20% acima da média)
+        optimistic_pts = stats.get('pts_avg', 0) * 1.2
+        optimistic_reb = stats.get('reb_avg', 0) * 1.2
+        optimistic_ast = stats.get('ast_avg', 0) * 1.2
+        
+        # Riscos
+        risks = []
+        if player_data.get('role') != 'starter':
+            risks.append("Variação de minutos")
+        
+        blowout_risk = situational.get('blowout_risk', False)
+        if blowout_risk:
+            risks.append("Risco de blowout")
+        
+        return {
+            "upside_score": min(len(upside_factors) * 2, 10),
+            "explosion_factors": ", ".join(upside_factors) if upside_factors else "Consistência acima da média",
+            "optimistic_projection": f"{optimistic_pts:.1f} PTS, {optimistic_reb:.1f} REB, {optimistic_ast:.1f} AST",
+            "risks": ", ".join(risks) if risks else "Risco moderado"
+        }
+    
+    def _format_banco_fields(self, player_data: Dict, context: Dict) -> Dict:
+        """Campos específicos para estratégia banco."""
+        stats = player_data.get('stats', {})
+        pra_avg = stats.get('pts_avg', 0) + stats.get('reb_avg', 0) + stats.get('ast_avg', 0)
+        
+        # Estatísticas por minuto
+        minutes_avg = player_data.get('minutes_avg', 30)
+        if minutes_avg > 0:
+            pts_per_min = stats.get('pts_avg', 0) / minutes_avg
+            reb_per_min = stats.get('reb_avg', 0) / minutes_avg
+            ast_per_min = stats.get('ast_avg', 0) / minutes_avg
+        else:
+            pts_per_min = reb_per_min = ast_per_min = 0
+        
+        # Contexto de oportunidade
+        opportunity = []
+        role = player_data.get('role', '')
+        
+        if role in ['bench', 'rotation']:
+            opportunity.append("Papel de reserva com minutos garantidos")
+        
+        evidence = player_data.get('evidence', {})
+        situational = evidence.get('situational', {})
+        
+        if situational.get('blowout_risk', False):
+            opportunity.append("Potencial garbage time")
+        
+        # Razão custo-benefício (simplificada)
+        value_ratio = "Alta" if pra_avg > 20 and role in ['bench', 'rotation'] else "Média"
+        
+        return {
+            "value_score": min(int(pra_avg / 3), 10),  # Score baseado no PRA
+            "per_minute_stats": f"{pts_per_min:.2f} PTS/min, {reb_per_min:.2f} REB/min, {ast_per_min:.2f} AST/min",
+            "opportunity_context": "; ".join(opportunity) if opportunity else "Papel definido na rotação",
+            "value_ratio": value_ratio
+        }
+    
+    def _format_explosao_fields(self, player_data: Dict, context: Dict) -> Dict:
+        """Campos específicos para estratégia explosão."""
+        # Fatores situacionais
+        situational_factors = []
+        
+        evidence = player_data.get('evidence', {})
+        situational = evidence.get('situational', {})
+        
+        if situational.get('injury_boost', False):
+            situational_factors.append("Lesões no mesmo posição")
+        
+        if situational.get('pace_boost', False):
+            situational_factors.append("Ritmo extremamente alto")
+        
+        # Elemento surpresa
+        surprise_elements = []
+        role = player_data.get('role', '')
+        
+        if role not in ['starter', 'rotation']:
+            surprise_elements.append("Minutos inesperados")
+        
+        # Projeção no cenário ideal
+        stats = player_data.get('stats', {})
+        best_case_pts = stats.get('pts_avg', 0) * 1.4
+        best_case_reb = stats.get('reb_avg', 0) * 1.4
+        best_case_ast = stats.get('ast_avg', 0) * 1.4
+        
+        # Score de impacto
+        impact_score = min(len(situational_factors) * 3 + len(surprise_elements) * 2, 10)
+        
+        return {
+            "impact_score": impact_score,
+            "situational_factors": ", ".join(situational_factors) if situational_factors else "Contexto favorável",
+            "surprise_element": ", ".join(surprise_elements) if surprise_elements else "Potencial de minuto aumentado",
+            "best_case": f"{best_case_pts:.1f}+ PTS, {best_case_reb:.1f}+ REB, {best_case_ast:.1f}+ AST"
+        }
+    
+    def _extract_motives(self, theses: List) -> str:
+        """Extrai motivos das teses aplicadas."""
+        if not theses:
+            return "Matchup favorável identificado"
+        
+        motives = []
+        for thesis in theses:
+            thesis_motives = thesis.get('motives', [])
+            if isinstance(thesis_motives, list):
+                motives.extend(thesis_motives)
+            elif isinstance(thesis_motives, str):
+                motives.append(thesis_motives)
+        
+        # Remover duplicados e limitar
+        unique_motives = list(dict.fromkeys(motives))[:3]
+        return "; ".join(unique_motives)
+    
+    def _format_matchup_summary(self, matchup_context: Dict) -> str:
+        """Formata resumo do matchup para narrativas."""
+        if not matchup_context:
+            return "Dados do matchup não disponíveis"
+        
+        parts = []
+        
+        home = matchup_context.get('home_team', '')
+        away = matchup_context.get('away_team', '')
+        if home and away:
+            parts.append(f"{home} vs {away}")
+        
+        pace = matchup_context.get('pace', 0)
+        if pace:
+            pace_label = "⚡ RÁPIDO" if pace >= 110 else "🐢 LENTO" if pace <= 95 else "⚖️ MÉDIO"
+            parts.append(f"Ritmo: {pace} ({pace_label})")
+        
+        spread = matchup_context.get('spread', 0)
+        if spread:
+            favorite = home if spread < 0 else away
+            parts.append(f"Favorito: {favorite} ({abs(spread):.1f})")
+        
+        total = matchup_context.get('total', 0)
+        if total:
+            total_label = "ALTO" if total >= 230 else "BAIXO" if total <= 210 else "MÉDIO"
+            parts.append(f"Total: {total} ({total_label})")
+        
+        return " | ".join(parts)
+    
+    def _format_empty_narrative(self, category: str) -> Dict:
+        """Formata narrativa para categoria sem recomendações."""
+        template = self.templates[category]
+        
+        return {
+            "overview": {
+                "text": f"# {template['title']}\n\n*Nenhuma recomendação disponível para esta estratégia no momento.*\n\n🔍 **Motivo possível:** Os critérios para '{template['subtitle']}' não foram atendidos pelos jogadores disponíveis.",
+                "metrics": {
+                    "avg_confidence": 0,
+                    "team_diversity": 0,
+                    "avg_pra": 0,
+                    "player_count": 0
+                },
+                "matchup_context": "N/A"
+            },
+            "players": [],
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "recommendation_count": 0,
+            "color": self.color_codes.get(category, "#000000")
+        }
+    
+    def generate_compact_table(self, category: str, recommendations: List) -> pd.DataFrame:
+        """
+        Gera tabela compacta para exibição nas abas.
+        
+        Args:
+            category: Categoria da estratégia
+            recommendations: Lista de recomendações formatadas
+            
+        Returns:
+            DataFrame com colunas otimizadas para exibição
+        """
         if not recommendations:
+            return pd.DataFrame()
+        
+        table_data = []
+        for rec in recommendations:
+            player_narrative = rec.get('narrative', {})
+            
+            table_data.append({
+                'Jogador': rec.get('name', ''),
+                'Pos': rec.get('position', ''),
+                'Time': rec.get('team', ''),
+                'Conf': f"{rec.get('confidence', 0):.0f}%",
+                'Tese': rec.get('raw_data', {}).get('primary_thesis', ''),
+                'PRA': rec.get('stats', {}).get('pra_avg', 0),
+                'Narrativa': self._summarize_narrative(rec.get('narrative', ''))
+            })
+        
+        df = pd.DataFrame(table_data)
+        
+        # Ordenar por confiança
+        if 'Conf' in df.columns:
+            df['Conf_Num'] = df['Conf'].str.replace('%', '').astype(float)
+            df = df.sort_values('Conf_Num', ascending=False)
+            df = df.drop('Conf_Num', axis=1)
+        
+        return df
+    
+    def _summarize_narrative(self, narrative: str, max_length: int = 80) -> str:
+        """Resume a narrativa para caber em tabelas."""
+        if not narrative:
             return ""
         
-        # Estatísticas
-        total_entries = len(recommendations)
-        avg_confidence = sum(r['metadata']['confidence'] for r in recommendations) / total_entries
+        # Extrair primeira sentença ou truncar
+        lines = narrative.split('\n')
+        for line in lines:
+            if line.strip() and not line.startswith('**'):
+                summary = line.strip()
+                if len(summary) > max_length:
+                    summary = summary[:max_length] + "..."
+                return summary
         
-        # Contagem por mercado
-        markets = {}
-        for r in recommendations:
-            market = r['metadata']['market']
-            markets[market] = markets.get(market, 0) + 1
-        
-        market_summary = ", ".join([f"{count}×{market}" for market, count in markets.items()])
-        
-        # Times envolvidos
-        teams = set()
-        for r in recommendations:
-            team = r.get('raw_data', {}).get('player_team', '')
-            if team:
-                teams.add(team)
-        
-        team_summary = ", ".join(sorted(teams))
-        
-        return f"""
-**📊 Resumo da Múltipla:**
-- **Entradas:** {total_entries} picks
-- **Confiança Média:** {avg_confidence:.0%}
-- **Mercados:** {market_summary}
-- **Times:** {team_summary if team_summary else 'Diversificado'}
-
-💡 **Estratégia:** Diversificação entre {len(teams)} times e {len(markets)} mercados diferentes.
-"""
+        return narrative[:max_length] + "..." if len(narrative) > max_length else narrative
     
-    def create_detailed_report(self, formatted_recommendations: Dict[str, List[Dict]], 
-                             game_ctx: Dict) -> str:
-        """Cria relatório detalhado com todas as recomendações"""
-        report_parts = []
+    def export_to_markdown(self, formatted_narratives: Dict, filename: str = None) -> str:
+        """
+        Exporta narrativas formatadas para Markdown.
         
-        # Cabeçalho do relatório
-        report_parts.append("# 📈 RELATÓRIO DE TRIXIES ESTRATÉGICAS")
-        report_parts.append(f"*Gerado em: {datetime.now().strftime('%d/%m/%Y %H:%M')}*")
-        report_parts.append("")
+        Args:
+            formatted_narratives: Narrativas formatadas
+            filename: Nome do arquivo (opcional)
+            
+        Returns:
+            String em formato Markdown
+        """
+        markdown_parts = []
         
-        # Contexto do jogo
-        home_team = game_ctx.get('home_team', '')
-        away_team = game_ctx.get('away_team', '')
-        spread = game_ctx.get('spread', 0)
-        total = game_ctx.get('total', 0)
-        pace = game_ctx.get('pace', 0)
+        # Cabeçalho
+        markdown_parts.append("# 📊 RELATÓRIO DE ESTRATÉGIAS DEEP7\n")
+        markdown_parts.append(f"*Gerado em: {datetime.now().strftime('%Y-%m-%d %H:%M')}*\n")
         
-        report_parts.append(f"**Confronto:** {away_team} @ {home_team}")
-        report_parts.append(f"**Spread:** {spread} | **Total:** {total} | **Pace Estimado:** {pace}")
-        report_parts.append("---")
-        report_parts.append("")
+        # Resumo executivo
+        markdown_parts.append("## 📈 Resumo Executivo\n")
         
-        # Recomendações por categoria
-        for category, recs in formatted_recommendations.items():
-            if not recs:
+        total_recommendations = sum(
+            cat_data.get('recommendation_count', 0) 
+            for cat_data in formatted_narratives.values()
+        )
+        
+        markdown_parts.append(f"- **Total de recomendações:** {total_recommendations}")
+        markdown_parts.append("- **Estratégias ativas:** " + ", ".join([
+            f"{cat.capitalize()} ({data.get('recommendation_count', 0)})" 
+            for cat, data in formatted_narratives.items() 
+            if data.get('recommendation_count', 0) > 0
+        ]))
+        markdown_parts.append("")
+        
+        # Narrativa de cada categoria
+        for category, data in formatted_narratives.items():
+            if data.get('recommendation_count', 0) == 0:
                 continue
             
-            category_config = self.narrative_templates[category]
-            report_parts.append(f"## {category_config['title']}")
-            report_parts.append(f"*{category_config['intro']}*")
-            report_parts.append("")
+            # Usar a cor para embelezar no markdown (se suportado)
+            color_hex = data.get('color', '#000000')
+            markdown_parts.append(f"---\n\n## 🎯 {category.upper()}\n")
             
-            for rec in recs:
-                report_parts.append(rec['formatted_text'])
-                report_parts.append("")
-        
-        return "\n".join(report_parts)
-    
-    def create_quick_summary_table(self, recommendations: Dict[str, List[Dict]]) -> pd.DataFrame:
-        """Cria tabela resumo rápida das recomendações"""
-        rows = []
-        
-        for category, recs in recommendations.items():
-            for rec in recs:
-                raw_data = rec.get('raw_data', {})
-                metadata = rec.get('metadata', {})
+            # Adicionar visão geral
+            overview = data.get('overview', {})
+            markdown_parts.append(overview.get('text', ''))
+            markdown_parts.append("")
+            
+            # Adicionar jogadores
+            markdown_parts.append("### 🏀 Jogadores Recomendados\n")
+            
+            for i, player in enumerate(data.get('players', []), 1):
+                markdown_parts.append(f"#### {i}. {player.get('name', '')} ({player.get('position', '')} - {player.get('team', '')})")
+                markdown_parts.append(f"*Confiança: {player.get('confidence', 0):.0f}%*")
+                markdown_parts.append("")
+                markdown_parts.append(player.get('narrative', ''))
+                markdown_parts.append("")
                 
-                rows.append({
-                    'Categoria': category.capitalize(),
-                    'Jogador': metadata.get('player', ''),
-                    'Mercado': metadata.get('market', ''),
-                    'Confiança': f"{metadata.get('confidence', 0):.0%}",
-                    'Tese': metadata.get('thesis', ''),
-                    'Estratégia': metadata.get('strategy', ''),
-                    'Time': raw_data.get('player_team', ''),
-                    'Role': raw_data.get('player_role', '').capitalize()
-                })
+                # Estatísticas
+                stats = player.get('stats', {})
+                if stats:
+                    markdown_parts.append(f"**Estatísticas:** {stats.get('pts_avg', 0):.1f} PTS, {stats.get('reb_avg', 0):.1f} REB, {stats.get('ast_avg', 0):.1f} AST")
+                    markdown_parts.append("")
+                
+                markdown_parts.append("---")
+                markdown_parts.append("")
         
-        return pd.DataFrame(rows)
-
-
-# Função de exemplo para teste
-def test_narrative_formatter():
-    """Testa o formatador de narrativas com dados de exemplo"""
-    from thesis_engine import ThesisEngine
-    from strategy_engine import StrategyEngine
-    
-    # Dados de exemplo
-    players_data = [
-        {
-            'name': 'Bam Adebayo',
-            'id': '203112',
-            'pos': 'C',
-            'role': 'starter',
-            'min_avg': 34.5,
-            'usg': 22.3,
-            'ppg': 20.5,
-            'rpg': 9.2,
-            'apg': 3.8,
-            'pra': 33.5,
-            'ast_pct': 18.5,
-            'dvp_reb': 1.15,
-            'dvp_pts': 1.08,
-            'dvp_ast': 0.95,
-            'player_class': 'GLASS_BANGER; DEFENSIVE_ANCHOR',
-            'team': 'MIA',
-            'last_5_ppg': 21.8,
-            'last_5_rpg': 10.1,
-            'last_5_apg': 4.2,
-            'last_5_min_avg': 35.2
-        },
-        {
-            'name': 'Jimmy Butler',
-            'id': '202710',
-            'pos': 'SF',
-            'role': 'starter',
-            'min_avg': 33.8,
-            'usg': 25.1,
-            'ppg': 21.2,
-            'rpg': 5.3,
-            'apg': 5.0,
-            'pra': 31.5,
-            'ast_pct': 24.2,
-            'dvp_reb': 1.05,
-            'dvp_pts': 1.12,
-            'dvp_ast': 1.08,
-            'player_class': 'ALL_AROUND; CLUTCH',
-            'team': 'MIA',
-            'last_5_ppg': 22.5,
-            'last_5_rpg': 5.8,
-            'last_5_apg': 5.5,
-            'last_5_min_avg': 34.5
-        }
-    ]
-    
-    game_ctx = {
-        'home_team': 'MIA',
-        'away_team': 'BOS',
-        'pace': 102.5,
-        'spread': -3.5,
-        'total': 225.5,
-        'opponent_team': 'Celtics'
-    }
-    
-    # Gera teses
-    thesis_engine = ThesisEngine()
-    all_theses = {}
-    
-    for player_ctx in players_data:
-        player_name = player_ctx['name']
-        theses = thesis_engine.generate_all_theses(player_ctx, game_ctx)
-        if theses:
-            for thesis in theses:
-                thesis['player_ctx'] = player_ctx
-            all_theses[player_name] = theses
-    
-    # Gera recomendações
-    strategy_engine = StrategyEngine()
-    recommendations = strategy_engine.compose_recommendations(all_theses, game_ctx)
-    
-    # Formata narrativas
-    formatter = NarrativeFormatter()
-    formatted = formatter.format_all_recommendations(recommendations, game_ctx)
-    
-    print("="*80)
-    print("TESTE DO NARRATIVE FORMATTER")
-    print("="*80)
-    
-    for category, recs in formatted.items():
-        if recs:
-            print(f"\n{recs[0]['title']}")
-            print("-" * 40)
-            
-            for rec in recs:
-                print("\n" + rec['formatted_text'])
-    
-    # Testa múltipla do dia
-    print("\n" + "="*80)
-    print("MÚLTIPLA DO DIA FORMATADA")
-    print("="*80)
-    
-    multipla = strategy_engine.generate_multipla_dia(all_theses, game_ctx)
-    formatted_multipla = formatter.format_multipla_dia(multipla, game_ctx)
-    
-    for multipla_type, content in formatted_multipla.items():
-        print(content['header'])
+        markdown_content = "\n".join(markdown_parts)
         
-        for rec in content['recommendations']:
-            print("\n" + rec['formatted_text'])
+        # Salvar em arquivo se nome fornecido
+        if filename:
+            try:
+                with open(filename, 'w', encoding='utf-8') as f:
+                    f.write(markdown_content)
+                logger.info(f"Relatório exportado para: {filename}")
+            except Exception as e:
+                logger.error(f"Erro ao exportar relatório: {e}")
         
-        print(content['summary'])
-    
-    # Testa relatório detalhado
-    print("\n" + "="*80)
-    print("RELATÓRIO DETALHADO (PRIMEIRAS LINHAS)")
-    print("="*80)
-    
-    report = formatter.create_detailed_report(formatted, game_ctx)
-    print(report[:500] + "...")
-    
-    # Testa tabela resumo
-    print("\n" + "="*80)
-    print("TABELA RESUMO")
-    print("="*80)
-    
-    summary_table = formatter.create_quick_summary_table(formatted)
-    print(summary_table.to_string())
-    
-    return formatted
-
-
-if __name__ == "__main__":
-    # Teste do módulo
-    test_narrative_formatter()
+        return markdown_content

@@ -3,7 +3,6 @@ Correlation Filters Module (FASE 4 Lite)
 Filtra combinações ruins em trixies
 """
 
-
 class CorrelationValidator:
     def __init__(self):
         self.position_groups = {
@@ -92,17 +91,3 @@ class CorrelationValidator:
             score *= 1.05
         
         return score
-
-    def validate_group(self, player_ids, category):
-        """
-        Valida um grupo de jogadores (compatível com StrategyEngine).
-        Retorna dicionário com 'problematic_pairs' vazio (simulação leve).
-        """
-        # Este é um modo lite — não temos acesso completo aos dados aqui,
-        # então retornamos validação básica sem pares problemáticos.
-        # Em versão avançada, isso usaria co-ocorrência real de minutos.
-        return {
-            "problematic_pairs": [],  # Nenhum par conflitante identificado
-            "score_adjustment": 1.0,
-            "is_valid": True
-        }

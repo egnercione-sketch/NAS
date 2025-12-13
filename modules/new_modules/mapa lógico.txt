@@ -1,0 +1,99 @@
+🔄 Fluxo do Módulo de Rotações
+1. Entrada de dados
+Fontes: ESPN/NBA (boxscore + play‑by‑play).
+
+Objetivo: saber quem está em quadra, quando e com quem.
+
+Saída: snapshots de lineups (5 jogadores, minutos juntos, posses, pontos pró/contra).
+
+2. Agregação e sinais
+Processo: agrupar snapshots por lineup_key (conjunto de jogadores).
+
+Métricas: minutos totais juntos, jogos, estatísticas por 100 posses, coeficiente de variação (CV).
+
+Saída: lineup_signals com players, métricas, confiança, contextos.
+
+3. Injeção no player_ctx
+Campos adicionados:
+
+expected_minutes ajustado pela formação.
+
+rotation_context (starter/rotation/bench/deep_bench).
+
+lineup_confidence.
+
+prob_ceiling_pts/reb/ast/pra recalculados.
+
+Objetivo: enriquecer cada jogador com contexto real de rotação.
+
+4. ThesisEngine
+Uso dos sinais:
+
+Teses só ativam se lineup_confidence for alta.
+
+BigRebound reforçado se formação tem reb_per100 elevado.
+
+AssistMatchup reforçado se lineup favorece spacing e co‑ocorrência.
+
+ValueHunter ativado se reserva ganha minutos por ausência detectada.
+
+CeilingExplosion só dispara se prob_ceiling_* alto + lineup_shock.
+
+Saída: hipóteses por jogador/mercado com confiança e motivos.
+
+5. StrategyEngine
+Composição:
+
+Seleciona teses com maior confiança.
+
+Garante não‑repetição de jogadores entre narrativas.
+
+Usa lineup_signals para diversidade real (times, roles, mercados).
+
+Narrativas:
+
+Conservadora → titulares em formações estáveis.
+
+Ousada → tetos reforçados por rotação.
+
+Banco → reservas com minutos extras.
+
+Explosão → mercados ativados por teto + contexto.
+
+6. CorrelationValidator
+Validação:
+
+Evita trixies com jogadores que não compartilham minutos.
+
+Penaliza pares que se alternam (não jogam juntos).
+
+Bônus para diversidade de times/mercados/roles.
+
+Saída: score ajustado + lista de violações.
+
+7. NarrativeFormatter
+Formatação:
+
+Explica decisão citando formação: “Jogador X está em lineup estável com Y e Z, 25 minutos juntos em 3 jogos, reforçando teses de rebote.”
+
+Saída: texto curto + tabela compacta.
+
+8. UI e Múltipla do Dia
+Escalações enriquecidas: painel lateral “Formações prováveis” com lineup_signals.
+
+Trixies estratégicas: quatro narrativas distintas, sem repetir jogadores.
+
+Múltipla do Dia: duas versões (conservadora e ousada), diversidade garantida por sinais de rotação.
+
+✅ Resultado final
+Mais realismo: recomendações refletem quem realmente estará em quadra.
+
+Menos falsos positivos: evita sugerir jogadores com role instável.
+
+Narrativas fortes: explicações citam formações e minutos juntos.
+
+Boost inteligente: só ativa quando teto é plausível pela rotação.
+
+ValueHunter certeiro: identifica reservas com minutos extras.
+
+Múltipla robusta: diversidade garantida por sinais de rotação.
