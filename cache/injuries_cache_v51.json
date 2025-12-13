@@ -1,0 +1,3115 @@
+{
+  "ORL": {
+    "timestamp": "2025-12-05T23:14:34.072598",
+    "injuries": []
+  },
+  "LAL": {
+    "timestamp": "2025-12-05T23:14:34.074031",
+    "injuries": [
+      {
+        "name": "LeBron James",
+        "status": "Out",
+        "details": "Knee soreness",
+        "date": "2025-12-05"
+      },
+      {
+        "name": "Anthony Davis",
+        "status": "Questionable",
+        "details": "Ankle sprain",
+        "date": "2025-12-05"
+      }
+    ]
+  },
+  "ATL": {
+    "timestamp": "2025-12-05T23:14:34.075250",
+    "injuries": []
+  },
+  "TOR": {
+    "timestamp": "2025-12-05T23:14:34.076519",
+    "injuries": []
+  },
+  "MIA": {
+    "timestamp": "2025-12-05T23:14:34.077674",
+    "injuries": []
+  },
+  "DAL": {
+    "timestamp": "2025-12-05T23:14:34.079038",
+    "injuries": []
+  },
+  "NY": {
+    "timestamp": "2025-12-05T23:14:34.080244",
+    "injuries": []
+  },
+  "HOU": {
+    "timestamp": "2025-12-05T23:14:34.081433",
+    "injuries": []
+  },
+  "CHI": {
+    "timestamp": "2025-12-05T23:14:34.082607",
+    "injuries": []
+  },
+  "OKC": {
+    "timestamp": "2025-12-05T23:14:34.083758",
+    "injuries": []
+  },
+  "LAC": {
+    "timestamp": "2025-12-05T23:14:34.084966",
+    "injuries": []
+  },
+  "CLE": {
+    "timestamp": "2025-12-05T23:14:34.086517",
+    "injuries": []
+  },
+  "DEN": {
+    "timestamp": "2025-12-05T23:14:34.087939",
+    "injuries": []
+  },
+  "DET": {
+    "timestamp": "2025-12-05T23:14:34.089357",
+    "injuries": []
+  },
+  "POR": {
+    "timestamp": "2025-12-05T23:14:34.090634",
+    "injuries": []
+  },
+  "MEM": {
+    "timestamp": "2025-12-05T23:14:34.091964",
+    "injuries": []
+  },
+  "PHX": {
+    "timestamp": "2025-12-05T23:14:34.093247",
+    "injuries": []
+  },
+  "PHI": {
+    "timestamp": "2025-12-05T23:14:34.094391",
+    "injuries": []
+  },
+  "SA": {
+    "timestamp": "2025-12-05T23:14:34.095567",
+    "injuries": []
+  },
+  "IND": {
+    "timestamp": "2025-12-05T23:14:34.096870",
+    "injuries": []
+  },
+  "CHA": {
+    "timestamp": "2025-12-05T23:14:34.098108",
+    "injuries": []
+  },
+  "MIL": {
+    "timestamp": "2025-12-05T23:14:34.099362",
+    "injuries": []
+  },
+  "UTAH": {
+    "timestamp": "2025-12-05T23:14:34.100677",
+    "injuries": []
+  },
+  "BOS": {
+    "timestamp": "2025-12-05T23:14:34.101986",
+    "injuries": [
+      {
+        "name": "Jayson Tatum",
+        "status": "Out",
+        "details": "Knee soreness",
+        "date": "2025-12-05"
+      },
+      {
+        "name": "Jaylen Brown",
+        "status": "Questionable",
+        "details": "Ankle sprain",
+        "date": "2025-12-05"
+      }
+    ]
+  },
+  "teams": {
+    "UTAH": [
+      {
+        "name": "Kyle Anderson",
+        "name_norm": "kyle anderson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ace Bailey",
+        "name_norm": "ace bailey",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Walter Clayton Jr.",
+        "name_norm": "walter clayton",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Isaiah Collier",
+        "name_norm": "isaiah collier",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kyle Filipowski",
+        "name_norm": "kyle filipowski",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Keyonte George",
+        "name_norm": "keyonte george",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Elijah Harkless",
+        "name_norm": "elijah harkless",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Taylor Hendricks",
+        "name_norm": "taylor hendricks",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Walker Kessler",
+        "name_norm": "walker kessler",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-05T18:51Z"
+      },
+      {
+        "name": "Kevin Love",
+        "name_norm": "kevin love",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Lauri Markkanen",
+        "name_norm": "lauri markkanen",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Svi Mykhailiuk",
+        "name_norm": "svi mykhailiuk",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Georges Niang",
+        "name_norm": "georges niang",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-22T19:30Z"
+      },
+      {
+        "name": "Jusuf Nurkic",
+        "name_norm": "jusuf nurkic",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Brice Sensabaugh",
+        "name_norm": "brice sensabaugh",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "John Tonje",
+        "name_norm": "john tonje",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Oscar Tshiebwe",
+        "name_norm": "oscar tshiebwe",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Cody Williams",
+        "name_norm": "cody williams",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "DET": [
+      {
+        "name": "Cade Cunningham",
+        "name_norm": "cade cunningham",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jalen Duren",
+        "name_norm": "jalen duren",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Javonte Green",
+        "name_norm": "javonte green",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tobias Harris",
+        "name_norm": "tobias harris",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ronald Holland II",
+        "name_norm": "ronald holland",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jaden Ivey",
+        "name_norm": "jaden ivey",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Daniss Jenkins",
+        "name_norm": "daniss jenkins",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Isaac Jones",
+        "name_norm": "isaac jones",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Bobi Klintman",
+        "name_norm": "bobi klintman",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-06T00:26Z"
+      },
+      {
+        "name": "Chaz Lanier",
+        "name_norm": "chaz lanier",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Caris LeVert",
+        "name_norm": "caris levert",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Wendell Moore Jr.",
+        "name_norm": "wendell moore",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Paul Reed",
+        "name_norm": "paul reed",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Duncan Robinson",
+        "name_norm": "duncan robinson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Marcus Sasser",
+        "name_norm": "marcus sasser",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-06T00:26Z"
+      },
+      {
+        "name": "Tolu Smith",
+        "name_norm": "tolu smith",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Isaiah Stewart",
+        "name_norm": "isaiah stewart",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ausar Thompson",
+        "name_norm": "ausar thompson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "PHI": [
+      {
+        "name": "Dominick Barlow",
+        "name_norm": "dominick barlow",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Adem Bona",
+        "name_norm": "adem bona",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Johni Broome",
+        "name_norm": "johni broome",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Andre Drummond",
+        "name_norm": "andre drummond",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "VJ Edgecombe",
+        "name_norm": "vj edgecombe",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Justin Edwards",
+        "name_norm": "justin edwards",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Joel Embiid",
+        "name_norm": "joel embiid",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T19:35Z"
+      },
+      {
+        "name": "Paul George",
+        "name_norm": "paul george",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Eric Gordon",
+        "name_norm": "eric gordon",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Quentin Grimes",
+        "name_norm": "quentin grimes",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kyle Lowry",
+        "name_norm": "kyle lowry",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tyrese Maxey",
+        "name_norm": "tyrese maxey",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jared McCain",
+        "name_norm": "jared mccain",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kelly Oubre Jr.",
+        "name_norm": "kelly oubre",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-03T22:48Z"
+      },
+      {
+        "name": "Hunter Sallis",
+        "name_norm": "hunter sallis",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jabari Walker",
+        "name_norm": "jabari walker",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Trendon Watford",
+        "name_norm": "trendon watford",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-26T18:56Z"
+      }
+    ],
+    "LAL": [
+      {
+        "name": "Deandre Ayton",
+        "name_norm": "deandre ayton",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Luka Doncic",
+        "name_norm": "luka doncic",
+        "status": "Day-To-Day",
+        "details": "",
+        "date": "2025-12-06T03:40Z"
+      },
+      {
+        "name": "Rui Hachimura",
+        "name_norm": "rui hachimura",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jaxson Hayes",
+        "name_norm": "jaxson hayes",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Bronny James",
+        "name_norm": "bronny james",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "LeBron James",
+        "name_norm": "lebron james",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T21:19Z"
+      },
+      {
+        "name": "Maxi Kleber",
+        "name_norm": "maxi kleber",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Dalton Knecht",
+        "name_norm": "dalton knecht",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jake LaRavia",
+        "name_norm": "jake laravia",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Chris Manon",
+        "name_norm": "chris manon",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Austin Reaves",
+        "name_norm": "austin reaves",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Marcus Smart",
+        "name_norm": "marcus smart",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T18:12Z"
+      },
+      {
+        "name": "Nick Smith Jr.",
+        "name_norm": "nick smith",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Adou Thiero",
+        "name_norm": "adou thiero",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Drew Timme",
+        "name_norm": "drew timme",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jarred Vanderbilt",
+        "name_norm": "jarred vanderbilt",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Gabe Vincent",
+        "name_norm": "gabe vincent",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "DAL": [
+      {
+        "name": "Max Christie",
+        "name_norm": "max christie",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Moussa Cisse",
+        "name_norm": "moussa cisse",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Anthony Davis",
+        "name_norm": "anthony davis",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Dante Exum",
+        "name_norm": "dante exum",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-20T20:07Z"
+      },
+      {
+        "name": "Cooper Flagg",
+        "name_norm": "cooper flagg",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Daniel Gafford",
+        "name_norm": "daniel gafford",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T19:42Z"
+      },
+      {
+        "name": "Jaden Hardy",
+        "name_norm": "jaden hardy",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kyrie Irving",
+        "name_norm": "kyrie irving",
+        "status": "Out",
+        "details": "",
+        "date": "2025-09-29T16:06Z"
+      },
+      {
+        "name": "Miles Kelly",
+        "name_norm": "miles kelly",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Dereck Lively II",
+        "name_norm": "dereck lively",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T21:38Z"
+      },
+      {
+        "name": "Naji Marshall",
+        "name_norm": "naji marshall",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Caleb Martin",
+        "name_norm": "caleb martin",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ryan Nembhard",
+        "name_norm": "ryan nembhard",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Dwight Powell",
+        "name_norm": "dwight powell",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "D'Angelo Russell",
+        "name_norm": "d'angelo russell",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Klay Thompson",
+        "name_norm": "klay thompson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "P.J. Washington",
+        "name_norm": "p j washington",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T19:46Z"
+      },
+      {
+        "name": "Brandon Williams",
+        "name_norm": "brandon williams",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "OKC": [
+      {
+        "name": "Brooks Barnhizer",
+        "name_norm": "brooks barnhizer",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Branden Carlson",
+        "name_norm": "branden carlson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Alex Caruso",
+        "name_norm": "alex caruso",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T23:38Z"
+      },
+      {
+        "name": "Ousmane Dieng",
+        "name_norm": "ousmane dieng",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Luguentz Dort",
+        "name_norm": "luguentz dort",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T23:50Z"
+      },
+      {
+        "name": "Shai Gilgeous-Alexander",
+        "name_norm": "shai gilgeous alexander",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Isaiah Hartenstein",
+        "name_norm": "isaiah hartenstein",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-30T01:21Z"
+      },
+      {
+        "name": "Chet Holmgren",
+        "name_norm": "chet holmgren",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Isaiah Joe",
+        "name_norm": "isaiah joe",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-06T01:35Z"
+      },
+      {
+        "name": "Ajay Mitchell",
+        "name_norm": "ajay mitchell",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Thomas Sorber",
+        "name_norm": "thomas sorber",
+        "status": "Out",
+        "details": "",
+        "date": "2025-09-05T21:43Z"
+      },
+      {
+        "name": "Nikola Topic",
+        "name_norm": "nikola topic",
+        "status": "Out",
+        "details": "",
+        "date": "2025-10-30T16:35Z"
+      },
+      {
+        "name": "Cason Wallace",
+        "name_norm": "cason wallace",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Aaron Wiggins",
+        "name_norm": "aaron wiggins",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jalen Williams",
+        "name_norm": "jalen williams",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jaylin Williams",
+        "name_norm": "jaylin williams",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kenrich Williams",
+        "name_norm": "kenrich williams",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Chris Youngblood",
+        "name_norm": "chris youngblood",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "SA": [
+      {
+        "name": "Harrison Barnes",
+        "name_norm": "harrison barnes",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Bismack Biyombo",
+        "name_norm": "bismack biyombo",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Carter Bryant",
+        "name_norm": "carter bryant",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Stephon Castle",
+        "name_norm": "stephon castle",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T22:29Z"
+      },
+      {
+        "name": "Julian Champagnie",
+        "name_norm": "julian champagnie",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "De'Aaron Fox",
+        "name_norm": "de'aaron fox",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Dylan Harper",
+        "name_norm": "dylan harper",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Harrison Ingram",
+        "name_norm": "harrison ingram",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Keldon Johnson",
+        "name_norm": "keldon johnson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "David Jones Garcia",
+        "name_norm": "david jones garcia",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Luke Kornet",
+        "name_norm": "luke kornet",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T16:32Z"
+      },
+      {
+        "name": "Jordan McLaughlin",
+        "name_norm": "jordan mclaughlin",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-01T23:37Z"
+      },
+      {
+        "name": "Riley Minix",
+        "name_norm": "riley minix",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kelly Olynyk",
+        "name_norm": "kelly olynyk",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jeremy Sochan",
+        "name_norm": "jeremy sochan",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Devin Vassell",
+        "name_norm": "devin vassell",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Lindy Waters III",
+        "name_norm": "lindy waters",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Victor Wembanyama",
+        "name_norm": "victor wembanyama",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-01T23:37Z"
+      }
+    ],
+    "NY": [
+      {
+        "name": "OG Anunoby",
+        "name_norm": "og anunoby",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Mikal Bridges",
+        "name_norm": "mikal bridges",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jalen Brunson",
+        "name_norm": "jalen brunson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jordan Clarkson",
+        "name_norm": "jordan clarkson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Pacome Dadiet",
+        "name_norm": "pacome dadiet",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Mohamed Diawara",
+        "name_norm": "mohamed diawara",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tosan Evbuomwan",
+        "name_norm": "tosan evbuomwan",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Josh Hart",
+        "name_norm": "josh hart",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ariel Hukporti",
+        "name_norm": "ariel hukporti",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Trey Jemison III",
+        "name_norm": "trey jemison",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tyler Kolek",
+        "name_norm": "tyler kolek",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Miles McBride",
+        "name_norm": "miles mcbride",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kevin McCullar Jr.",
+        "name_norm": "kevin mccullar",
+        "status": "Day-To-Day",
+        "details": "",
+        "date": "2025-11-27T15:29Z"
+      },
+      {
+        "name": "Mitchell Robinson",
+        "name_norm": "mitchell robinson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Landry Shamet",
+        "name_norm": "landry shamet",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-26T20:02Z"
+      },
+      {
+        "name": "Karl-Anthony Towns",
+        "name_norm": "karl anthony towns",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Guerschon Yabusele",
+        "name_norm": "guerschon yabusele",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "CHA": [
+      {
+        "name": "LaMelo Ball",
+        "name_norm": "lamelo ball",
+        "status": "Day-To-Day",
+        "details": "",
+        "date": "2025-12-06T02:33Z"
+      },
+      {
+        "name": "Miles Bridges",
+        "name_norm": "miles bridges",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Pat Connaughton",
+        "name_norm": "pat connaughton",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T22:26Z"
+      },
+      {
+        "name": "Moussa Diabate",
+        "name_norm": "moussa diabate",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Josh Green",
+        "name_norm": "josh green",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T14:36Z"
+      },
+      {
+        "name": "Sion James",
+        "name_norm": "sion james",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ryan Kalkbrenner",
+        "name_norm": "ryan kalkbrenner",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kon Knueppel",
+        "name_norm": "kon knueppel",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tre Mann",
+        "name_norm": "tre mann",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T23:39Z"
+      },
+      {
+        "name": "Liam McNeeley",
+        "name_norm": "liam mcneeley",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Brandon Miller",
+        "name_norm": "brandon miller",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Drew Peterson",
+        "name_norm": "drew peterson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Mason Plumlee",
+        "name_norm": "mason plumlee",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Antonio Reeves",
+        "name_norm": "antonio reeves",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tidjane Salaun",
+        "name_norm": "tidjane salaun",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Collin Sexton",
+        "name_norm": "collin sexton",
+        "status": "Day-To-Day",
+        "details": "",
+        "date": "2025-12-06T03:40Z"
+      },
+      {
+        "name": "KJ Simpson",
+        "name_norm": "kj simpson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Grant Williams",
+        "name_norm": "grant williams",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-02T19:39Z"
+      }
+    ],
+    "TOR": [
+      {
+        "name": "Ochai Agbaji",
+        "name_norm": "ochai agbaji",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T18:19Z"
+      },
+      {
+        "name": "Scottie Barnes",
+        "name_norm": "scottie barnes",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "RJ Barrett",
+        "name_norm": "rj barrett",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T18:09Z"
+      },
+      {
+        "name": "Jamison Battle",
+        "name_norm": "jamison battle",
+        "status": "Day-To-Day",
+        "details": "",
+        "date": "2025-12-06T02:55Z"
+      },
+      {
+        "name": "Gradey Dick",
+        "name_norm": "gradey dick",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Chucky Hepburn",
+        "name_norm": "chucky hepburn",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Brandon Ingram",
+        "name_norm": "brandon ingram",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "A.J. Lawson",
+        "name_norm": "a j lawson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Sandro Mamukelashvili",
+        "name_norm": "sandro mamukelashvili",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Alijah Martin",
+        "name_norm": "alijah martin",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jonathan Mogbo",
+        "name_norm": "jonathan mogbo",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Collin Murray-Boyles",
+        "name_norm": "collin murray boyles",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jakob Poeltl",
+        "name_norm": "jakob poeltl",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Immanuel Quickley",
+        "name_norm": "immanuel quickley",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jamal Shead",
+        "name_norm": "jamal shead",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Garrett Temple",
+        "name_norm": "garrett temple",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ja'Kobe Walter",
+        "name_norm": "ja'kobe walter",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "BOS": [
+      {
+        "name": "Chris Boucher",
+        "name_norm": "chris boucher",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jaylen Brown",
+        "name_norm": "jaylen brown",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Luka Garza",
+        "name_norm": "luka garza",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Hugo Gonzalez",
+        "name_norm": "hugo gonzalez",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ron Harper Jr.",
+        "name_norm": "ron harper",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Sam Hauser",
+        "name_norm": "sam hauser",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Josh Minott",
+        "name_norm": "josh minott",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Payton Pritchard",
+        "name_norm": "payton pritchard",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Neemias Queta",
+        "name_norm": "neemias queta",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Baylor Scheierman",
+        "name_norm": "baylor scheierman",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Max Shulga",
+        "name_norm": "max shulga",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Anfernee Simons",
+        "name_norm": "anfernee simons",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jayson Tatum",
+        "name_norm": "jayson tatum",
+        "status": "Out",
+        "details": "",
+        "date": "2025-10-09T16:40Z"
+      },
+      {
+        "name": "Xavier Tillman",
+        "name_norm": "xavier tillman",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jordan Walsh",
+        "name_norm": "jordan walsh",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Derrick White",
+        "name_norm": "derrick white",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Amari Williams",
+        "name_norm": "amari williams",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "MEM": [
+      {
+        "name": "Santi Aldama",
+        "name_norm": "santi aldama",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kobe Bufkin",
+        "name_norm": "kobe bufkin",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kentavious Caldwell-Pope",
+        "name_norm": "kentavious caldwell pope",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Brandon Clarke",
+        "name_norm": "brandon clarke",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-11T15:52Z"
+      },
+      {
+        "name": "Cedric Coward",
+        "name_norm": "cedric coward",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Zach Edey",
+        "name_norm": "zach edey",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "GG Jackson",
+        "name_norm": "gg jackson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jaren Jackson Jr.",
+        "name_norm": "jaren jackson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ty Jerome",
+        "name_norm": "ty jerome",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-22T17:04Z"
+      },
+      {
+        "name": "John Konchar",
+        "name_norm": "john konchar",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jock Landale",
+        "name_norm": "jock landale",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jahmai Mashack",
+        "name_norm": "jahmai mashack",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ja Morant",
+        "name_norm": "ja morant",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T23:09Z"
+      },
+      {
+        "name": "Scotty Pippen Jr.",
+        "name_norm": "scotty pippen",
+        "status": "Out",
+        "details": "",
+        "date": "2025-10-18T17:37Z"
+      },
+      {
+        "name": "Olivier-Maxence Prosper",
+        "name_norm": "olivier maxence prosper",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Javon Small",
+        "name_norm": "javon small",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-15T20:25Z"
+      },
+      {
+        "name": "Cam Spencer",
+        "name_norm": "cam spencer",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jaylen Wells",
+        "name_norm": "jaylen wells",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Vince Williams Jr.",
+        "name_norm": "vince williams",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "ORL": [
+      {
+        "name": "Paolo Banchero",
+        "name_norm": "paolo banchero",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Desmond Bane",
+        "name_norm": "desmond bane",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Goga Bitadze",
+        "name_norm": "goga bitadze",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Anthony Black",
+        "name_norm": "anthony black",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jamal Cain",
+        "name_norm": "jamal cain",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Wendell Carter Jr.",
+        "name_norm": "wendell carter",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Colin Castleton",
+        "name_norm": "colin castleton",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-24T16:19Z"
+      },
+      {
+        "name": "Tristan da Silva",
+        "name_norm": "tristan da silva",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jett Howard",
+        "name_norm": "jett howard",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jonathan Isaac",
+        "name_norm": "jonathan isaac",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tyus Jones",
+        "name_norm": "tyus jones",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Noah Penda",
+        "name_norm": "noah penda",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jase Richardson",
+        "name_norm": "jase richardson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Orlando Robinson",
+        "name_norm": "orlando robinson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jalen Suggs",
+        "name_norm": "jalen suggs",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Franz Wagner",
+        "name_norm": "franz wagner",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Moritz Wagner",
+        "name_norm": "moritz wagner",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-02T20:40Z"
+      }
+    ],
+    "LAC": [
+      {
+        "name": "Nicolas Batum",
+        "name_norm": "nicolas batum",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Bradley Beal",
+        "name_norm": "bradley beal",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-12T20:14Z"
+      },
+      {
+        "name": "Bogdan Bogdanovic",
+        "name_norm": "bogdan bogdanovic",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T22:55Z"
+      },
+      {
+        "name": "Kobe Brown",
+        "name_norm": "kobe brown",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Cam Christie",
+        "name_norm": "cam christie",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "John Collins",
+        "name_norm": "john collins",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "RayJ Dennis",
+        "name_norm": "rayj dennis",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kris Dunn",
+        "name_norm": "kris dunn",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "James Harden",
+        "name_norm": "james harden",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Derrick Jones Jr.",
+        "name_norm": "derrick jones",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-17T22:11Z"
+      },
+      {
+        "name": "Kawhi Leonard",
+        "name_norm": "kawhi leonard",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Brook Lopez",
+        "name_norm": "brook lopez",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jordan Miller",
+        "name_norm": "jordan miller",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-06T00:35Z"
+      },
+      {
+        "name": "Yanic Konan Niederhauser",
+        "name_norm": "yanic konan niederhauser",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kobe Sanders",
+        "name_norm": "kobe sanders",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ivica Zubac",
+        "name_norm": "ivica zubac",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "MIL": [
+      {
+        "name": "Alex Antetokounmpo",
+        "name_norm": "alex antetokounmpo",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Giannis Antetokounmpo",
+        "name_norm": "giannis antetokounmpo",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-06T01:16Z"
+      },
+      {
+        "name": "Thanasis Antetokounmpo",
+        "name_norm": "thanasis antetokounmpo",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Cole Anthony",
+        "name_norm": "cole anthony",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Amir Coffey",
+        "name_norm": "amir coffey",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "AJ Green",
+        "name_norm": "aj green",
+        "status": "Day-To-Day",
+        "details": "",
+        "date": "2025-12-06T04:36Z"
+      },
+      {
+        "name": "Gary Harris",
+        "name_norm": "gary harris",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Andre Jackson Jr.",
+        "name_norm": "andre jackson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kyle Kuzma",
+        "name_norm": "kyle kuzma",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Pete Nance",
+        "name_norm": "pete nance",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kevin Porter Jr.",
+        "name_norm": "kevin porter",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Bobby Portis",
+        "name_norm": "bobby portis",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Taurean Prince",
+        "name_norm": "taurean prince",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-14T00:35Z"
+      },
+      {
+        "name": "Ryan Rollins",
+        "name_norm": "ryan rollins",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Mark Sears",
+        "name_norm": "mark sears",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jericho Sims",
+        "name_norm": "jericho sims",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Gary Trent Jr.",
+        "name_norm": "gary trent",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Myles Turner",
+        "name_norm": "myles turner",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "MIA": [
+      {
+        "name": "Bam Adebayo",
+        "name_norm": "bam adebayo",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Simone Fontecchio",
+        "name_norm": "simone fontecchio",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Myron Gardner",
+        "name_norm": "myron gardner",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Vladislav Goldin",
+        "name_norm": "vladislav goldin",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tyler Herro",
+        "name_norm": "tyler herro",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T22:31Z"
+      },
+      {
+        "name": "Kasparas Jakucionis",
+        "name_norm": "kasparas jakucionis",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jaime Jaquez Jr.",
+        "name_norm": "jaime jaquez",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Keshad Johnson",
+        "name_norm": "keshad johnson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Nikola Jovic",
+        "name_norm": "nikola jovic",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Pelle Larsson",
+        "name_norm": "pelle larsson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Davion Mitchell",
+        "name_norm": "davion mitchell",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Norman Powell",
+        "name_norm": "norman powell",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Terry Rozier",
+        "name_norm": "terry rozier",
+        "status": "Out",
+        "details": "",
+        "date": "2025-10-23T16:24Z"
+      },
+      {
+        "name": "Dru Smith",
+        "name_norm": "dru smith",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kel'el Ware",
+        "name_norm": "kel'el ware",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Andrew Wiggins",
+        "name_norm": "andrew wiggins",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jahmir Young",
+        "name_norm": "jahmir young",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "DEN": [
+      {
+        "name": "Tamar Bates",
+        "name_norm": "tamar bates",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Christian Braun",
+        "name_norm": "christian braun",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-14T22:59Z"
+      },
+      {
+        "name": "Bruce Brown",
+        "name_norm": "bruce brown",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Aaron Gordon",
+        "name_norm": "aaron gordon",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-23T17:01Z"
+      },
+      {
+        "name": "Tim Hardaway Jr.",
+        "name_norm": "tim hardaway",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "DaRon Holmes II",
+        "name_norm": "daron holmes",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Cameron Johnson",
+        "name_norm": "cameron johnson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Nikola Jokic",
+        "name_norm": "nikola jokic",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Curtis Jones",
+        "name_norm": "curtis jones",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Spencer Jones",
+        "name_norm": "spencer jones",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jamal Murray",
+        "name_norm": "jamal murray",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Zeke Nnaji",
+        "name_norm": "zeke nnaji",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jalen Pickett",
+        "name_norm": "jalen pickett",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Julian Strawther",
+        "name_norm": "julian strawther",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-02T01:56Z"
+      },
+      {
+        "name": "Hunter Tyson",
+        "name_norm": "hunter tyson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jonas Valanciunas",
+        "name_norm": "jonas valanciunas",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Peyton Watson",
+        "name_norm": "peyton watson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "CLE": [
+      {
+        "name": "Jarrett Allen",
+        "name_norm": "jarrett allen",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-30T20:20Z"
+      },
+      {
+        "name": "Lonzo Ball",
+        "name_norm": "lonzo ball",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Thomas Bryant",
+        "name_norm": "thomas bryant",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Darius Garland",
+        "name_norm": "darius garland",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T22:38Z"
+      },
+      {
+        "name": "De'Andre Hunter",
+        "name_norm": "de'andre hunter",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Chris Livingston",
+        "name_norm": "chris livingston",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Sam Merrill",
+        "name_norm": "sam merrill",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T22:42Z"
+      },
+      {
+        "name": "Donovan Mitchell",
+        "name_norm": "donovan mitchell",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Evan Mobley",
+        "name_norm": "evan mobley",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Larry Nance Jr.",
+        "name_norm": "larry nance",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-30T20:16Z"
+      },
+      {
+        "name": "Craig Porter Jr.",
+        "name_norm": "craig porter",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tyrese Proctor",
+        "name_norm": "tyrese proctor",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T22:59Z"
+      },
+      {
+        "name": "Max Strus",
+        "name_norm": "max strus",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-02T22:50Z"
+      },
+      {
+        "name": "Nae'Qwan Tomlin",
+        "name_norm": "nae'qwan tomlin",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Luke Travers",
+        "name_norm": "luke travers",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jaylon Tyson",
+        "name_norm": "jaylon tyson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Dean Wade",
+        "name_norm": "dean wade",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "IND": [
+      {
+        "name": "Tony Bradley",
+        "name_norm": "tony bradley",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Johnny Furphy",
+        "name_norm": "johnny furphy",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tyrese Haliburton",
+        "name_norm": "tyrese haliburton",
+        "status": "Out",
+        "details": "",
+        "date": "2025-07-08T00:56Z"
+      },
+      {
+        "name": "Jay Huff",
+        "name_norm": "jay huff",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Isaiah Jackson",
+        "name_norm": "isaiah jackson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Quenton Jackson",
+        "name_norm": "quenton jackson",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-30T22:41Z"
+      },
+      {
+        "name": "Kam Jones",
+        "name_norm": "kam jones",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-30T23:01Z"
+      },
+      {
+        "name": "Garrison Mathews",
+        "name_norm": "garrison mathews",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Bennedict Mathurin",
+        "name_norm": "bennedict mathurin",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "T.J. McConnell",
+        "name_norm": "t j mcconnell",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Andrew Nembhard",
+        "name_norm": "andrew nembhard",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Aaron Nesmith",
+        "name_norm": "aaron nesmith",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-15T22:31Z"
+      },
+      {
+        "name": "Taelon Peter",
+        "name_norm": "taelon peter",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jeremiah Robinson-Earl",
+        "name_norm": "jeremiah robinson earl",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ben Sheppard",
+        "name_norm": "ben sheppard",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-06T00:00Z"
+      },
+      {
+        "name": "Pascal Siakam",
+        "name_norm": "pascal siakam",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ethan Thompson",
+        "name_norm": "ethan thompson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Obi Toppin",
+        "name_norm": "obi toppin",
+        "status": "Out",
+        "details": "",
+        "date": "2025-10-31T21:33Z"
+      },
+      {
+        "name": "Jarace Walker",
+        "name_norm": "jarace walker",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "PHX": [
+      {
+        "name": "Grayson Allen",
+        "name_norm": "grayson allen",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Devin Booker",
+        "name_norm": "devin booker",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T23:52Z"
+      },
+      {
+        "name": "Jamaree Bouyea",
+        "name_norm": "jamaree bouyea",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Koby Brea",
+        "name_norm": "koby brea",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Dillon Brooks",
+        "name_norm": "dillon brooks",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ryan Dunn",
+        "name_norm": "ryan dunn",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Rasheer Fleming",
+        "name_norm": "rasheer fleming",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Collin Gillespie",
+        "name_norm": "collin gillespie",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jordan Goodwin",
+        "name_norm": "jordan goodwin",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jalen Green",
+        "name_norm": "jalen green",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-11T21:37Z"
+      },
+      {
+        "name": "Nigel Hayes-Davis",
+        "name_norm": "nigel hayes davis",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Oso Ighodaro",
+        "name_norm": "oso ighodaro",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Isaiah Livers",
+        "name_norm": "isaiah livers",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T23:38Z"
+      },
+      {
+        "name": "Khaman Maluach",
+        "name_norm": "khaman maluach",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Royce O'Neale",
+        "name_norm": "royce o'neale",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Nick Richards",
+        "name_norm": "nick richards",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Mark Williams",
+        "name_norm": "mark williams",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "HOU": [
+      {
+        "name": "Steven Adams",
+        "name_norm": "steven adams",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Clint Capela",
+        "name_norm": "clint capela",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Isaiah Crawford",
+        "name_norm": "isaiah crawford",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "JD Davison",
+        "name_norm": "jd davison",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kevin Durant",
+        "name_norm": "kevin durant",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tari Eason",
+        "name_norm": "tari eason",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T00:02Z"
+      },
+      {
+        "name": "Dorian Finney-Smith",
+        "name_norm": "dorian finney smith",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-03T23:58Z"
+      },
+      {
+        "name": "Jeff Green",
+        "name_norm": "jeff green",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Aaron Holiday",
+        "name_norm": "aaron holiday",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Josh Okogie",
+        "name_norm": "josh okogie",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Alperen Sengun",
+        "name_norm": "alperen sengun",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T23:29Z"
+      },
+      {
+        "name": "Reed Sheppard",
+        "name_norm": "reed sheppard",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Tyler Smith",
+        "name_norm": "tyler smith",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jabari Smith Jr.",
+        "name_norm": "jabari smith",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jae'Sean Tate",
+        "name_norm": "jae'sean tate",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Amen Thompson",
+        "name_norm": "amen thompson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Fred VanVleet",
+        "name_norm": "fred vanvleet",
+        "status": "Out",
+        "details": "",
+        "date": "2025-09-22T20:02Z"
+      }
+    ],
+    "CHI": [
+      {
+        "name": "Matas Buzelis",
+        "name_norm": "matas buzelis",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jevon Carter",
+        "name_norm": "jevon carter",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Zach Collins",
+        "name_norm": "zach collins",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Ayo Dosunmu",
+        "name_norm": "ayo dosunmu",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T23:25Z"
+      },
+      {
+        "name": "Noa Essengue",
+        "name_norm": "noa essengue",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-03T23:24Z"
+      },
+      {
+        "name": "Trentyn Flowers",
+        "name_norm": "trentyn flowers",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Josh Giddey",
+        "name_norm": "josh giddey",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kevin Huerter",
+        "name_norm": "kevin huerter",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-03T23:48Z"
+      },
+      {
+        "name": "Tre Jones",
+        "name_norm": "tre jones",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T23:29Z"
+      },
+      {
+        "name": "Emanuel Miller",
+        "name_norm": "emanuel miller",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Isaac Okoro",
+        "name_norm": "isaac okoro",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T23:29Z"
+      },
+      {
+        "name": "Lachlan Olbrich",
+        "name_norm": "lachlan olbrich",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Julian Phillips",
+        "name_norm": "julian phillips",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jalen Smith",
+        "name_norm": "jalen smith",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T23:31Z"
+      },
+      {
+        "name": "Dalen Terry",
+        "name_norm": "dalen terry",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Nikola Vucevic",
+        "name_norm": "nikola vucevic",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Coby White",
+        "name_norm": "coby white",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Patrick Williams",
+        "name_norm": "patrick williams",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "POR": [
+      {
+        "name": "Deni Avdija",
+        "name_norm": "deni avdija",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Toumani Camara",
+        "name_norm": "toumani camara",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Sidy Cissoko",
+        "name_norm": "sidy cissoko",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Donovan Clingan",
+        "name_norm": "donovan clingan",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T23:13Z"
+      },
+      {
+        "name": "Javonte Cooke",
+        "name_norm": "javonte cooke",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jerami Grant",
+        "name_norm": "jerami grant",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Yang Hansen",
+        "name_norm": "yang hansen",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Scoot Henderson",
+        "name_norm": "scoot henderson",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-22T00:41Z"
+      },
+      {
+        "name": "Jrue Holiday",
+        "name_norm": "jrue holiday",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T22:22Z"
+      },
+      {
+        "name": "Damian Lillard",
+        "name_norm": "damian lillard",
+        "status": "Out",
+        "details": "",
+        "date": "2025-09-25T16:32Z"
+      },
+      {
+        "name": "Caleb Love",
+        "name_norm": "caleb love",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kris Murray",
+        "name_norm": "kris murray",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Duop Reath",
+        "name_norm": "duop reath",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Rayan Rupert",
+        "name_norm": "rayan rupert",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Shaedon Sharpe",
+        "name_norm": "shaedon sharpe",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Matisse Thybulle",
+        "name_norm": "matisse thybulle",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-01T22:07Z"
+      },
+      {
+        "name": "Blake Wesley",
+        "name_norm": "blake wesley",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-06T02:23Z"
+      },
+      {
+        "name": "Robert Williams III",
+        "name_norm": "robert williams",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      }
+    ],
+    "ATL": [
+      {
+        "name": "Nickeil Alexander-Walker",
+        "name_norm": "nickeil alexander walker",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Dyson Daniels",
+        "name_norm": "dyson daniels",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "N'Faly Dante",
+        "name_norm": "n'faly dante",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-05T15:45Z"
+      },
+      {
+        "name": "Nikola Durisic",
+        "name_norm": "nikola durisic",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Mouhamed Gueye",
+        "name_norm": "mouhamed gueye",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Caleb Houstan",
+        "name_norm": "caleb houstan",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jalen Johnson",
+        "name_norm": "jalen johnson",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Luke Kennard",
+        "name_norm": "luke kennard",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Vit Krejci",
+        "name_norm": "vit krejci",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Eli John N'Diaye",
+        "name_norm": "eli john n'diaye",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Asa Newell",
+        "name_norm": "asa newell",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Onyeka Okongwu",
+        "name_norm": "onyeka okongwu",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Kristaps Porzingis",
+        "name_norm": "kristaps porzingis",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Zaccharie Risacher",
+        "name_norm": "zaccharie risacher",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Jacob Toppin",
+        "name_norm": "jacob toppin",
+        "status": "Out",
+        "details": "",
+        "date": "2025-12-04T22:22Z"
+      },
+      {
+        "name": "Keaton Wallace",
+        "name_norm": "keaton wallace",
+        "status": "Active",
+        "details": "",
+        "date": ""
+      },
+      {
+        "name": "Trae Young",
+        "name_norm": "trae young",
+        "status": "Out",
+        "details": "",
+        "date": "2025-11-29T19:04Z"
+      }
+    ]
+  },
+  "last_updated": "2025-12-06T02:06:44.261500"
+}

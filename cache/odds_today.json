@@ -1,0 +1,34 @@
+{
+  "Miami Heat@Orlando Magic": {
+    "home_full": "Orlando Magic",
+    "away_full": "Miami Heat",
+    "spread": 1.5,
+    "total": 234.5,
+    "bookmaker": "DraftKings",
+    "last_update": "2025-12-09T04:04:37Z"
+  },
+  "New York Knicks@Toronto Raptors": {
+    "home_full": "Toronto Raptors",
+    "away_full": "New York Knicks",
+    "spread": 4.5,
+    "total": 225.5,
+    "bookmaker": "DraftKings",
+    "last_update": "2025-12-09T04:04:37Z"
+  },
+  "Phoenix Suns@Oklahoma City Thunder": {
+    "home_full": "Oklahoma City Thunder",
+    "away_full": "Phoenix Suns",
+    "spread": -15.5,
+    "total": 224.5,
+    "bookmaker": "FanDuel",
+    "last_update": "2025-12-09T04:04:38Z"
+  },
+  "San Antonio Spurs@Los Angeles Lakers": {
+    "home_full": "Los Angeles Lakers",
+    "away_full": "San Antonio Spurs",
+    "spread": -4.5,
+    "total": 234.5,
+    "bookmaker": "FanDuel",
+    "last_update": "2025-12-09T04:04:38Z"
+  }
+}

@@ -1,0 +1,2324 @@
+{
+  "version": "v46.0",
+  "last_updated": "2025-12-05T12:52:04.283428",
+  "teams": {
+    "LAL": {
+      "abbr": "LAL",
+      "name": "Los Angeles Lakers",
+      "record": "16-5",
+      "wins": 16,
+      "losses": 5,
+      "win_pct": 0.0,
+      "points_for": 2504,
+      "points_against": 2436,
+      "last_updated": "2025-12-05T12:42:22.268857",
+      "advanced_stats": {
+        "pace": 101.0,
+        "off_rtg": 124.4,
+        "def_rtg": 119.4,
+        "net_rtg": 5.0,
+        "avg_points_for": 125.6,
+        "avg_points_against": 120.6,
+        "avg_total": 246.2,
+        "last_5_wins": 4,
+        "win_rate": 0.8,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-05T00:30Z",
+          "opponent": "TOR",
+          "location": "away",
+          "points_for": 123,
+          "points_against": 120,
+          "win": true,
+          "total": 243
+        },
+        {
+          "date": "2025-12-02T03:00Z",
+          "opponent": "PHX",
+          "location": "home",
+          "points_for": 108,
+          "points_against": 125,
+          "win": false,
+          "total": 233
+        },
+        {
+          "date": "2025-12-01T02:30Z",
+          "opponent": "NOP",
+          "location": "home",
+          "points_for": 133,
+          "points_against": 121,
+          "win": true,
+          "total": 254
+        },
+        {
+          "date": "2025-11-29T03:00Z",
+          "opponent": "DAL",
+          "location": "home",
+          "points_for": 129,
+          "points_against": 119,
+          "win": true,
+          "total": 248
+        },
+        {
+          "date": "2025-11-26T04:00Z",
+          "opponent": "LAC",
+          "location": "home",
+          "points_for": 135,
+          "points_against": 118,
+          "win": true,
+          "total": 253
+        }
+      ],
+      "last_full_update": "2025-12-05T12:42:38.289056"
+    },
+    "ATL": {
+      "abbr": "ATL",
+      "name": "Atlanta Hawks",
+      "record": "13-10",
+      "wins": 13,
+      "losses": 10,
+      "win_pct": 0.0,
+      "points_for": 2687,
+      "points_against": 2662,
+      "last_updated": "2025-12-05T12:42:39.315147",
+      "advanced_stats": {
+        "pace": 100.3,
+        "off_rtg": 114.6,
+        "def_rtg": 120.2,
+        "net_rtg": -5.6,
+        "avg_points_for": 115.0,
+        "avg_points_against": 120.6,
+        "avg_total": 235.6,
+        "last_5_wins": 2,
+        "win_rate": 0.4,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T00:30Z",
+          "opponent": "LAC",
+          "location": "home",
+          "points_for": 92,
+          "points_against": 115,
+          "win": false,
+          "total": 207
+        },
+        {
+          "date": "2025-12-02T00:00Z",
+          "opponent": "DET",
+          "location": "away",
+          "points_for": 98,
+          "points_against": 99,
+          "win": false,
+          "total": 197
+        },
+        {
+          "date": "2025-11-30T23:00Z",
+          "opponent": "PHI",
+          "location": "away",
+          "points_for": 142,
+          "points_against": 134,
+          "win": true,
+          "total": 276
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "CLE",
+          "location": "home",
+          "points_for": 130,
+          "points_against": 123,
+          "win": true,
+          "total": 253
+        },
+        {
+          "date": "2025-11-26T00:00Z",
+          "opponent": "WAS",
+          "location": "away",
+          "points_for": 113,
+          "points_against": 132,
+          "win": false,
+          "total": 245
+        }
+      ],
+      "last_full_update": "2025-12-05T12:42:48.961826"
+    },
+    "BOS": {
+      "abbr": "BOS",
+      "name": "Boston Celtics",
+      "record": "13-9",
+      "wins": 13,
+      "losses": 9,
+      "win_pct": 0.0,
+      "points_for": 2567,
+      "points_against": 2436,
+      "last_updated": "2025-12-05T12:42:50.250403",
+      "advanced_stats": {
+        "pace": 100.4,
+        "off_rtg": 123.1,
+        "def_rtg": 112.8,
+        "net_rtg": 10.4,
+        "avg_points_for": 123.6,
+        "avg_points_against": 113.2,
+        "avg_total": 236.8,
+        "last_5_wins": 4,
+        "win_rate": 0.8,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-05T00:00Z",
+          "opponent": "WAS",
+          "location": "away",
+          "points_for": 146,
+          "points_against": 101,
+          "win": true,
+          "total": 247
+        },
+        {
+          "date": "2025-12-03T01:00Z",
+          "opponent": "NYK",
+          "location": "home",
+          "points_for": 123,
+          "points_against": 117,
+          "win": true,
+          "total": 240
+        },
+        {
+          "date": "2025-11-30T23:00Z",
+          "opponent": "CLE",
+          "location": "away",
+          "points_for": 117,
+          "points_against": 115,
+          "win": true,
+          "total": 232
+        },
+        {
+          "date": "2025-11-29T22:00Z",
+          "opponent": "MIN",
+          "location": "away",
+          "points_for": 115,
+          "points_against": 119,
+          "win": false,
+          "total": 234
+        },
+        {
+          "date": "2025-11-26T22:00Z",
+          "opponent": "DET",
+          "location": "home",
+          "points_for": 117,
+          "points_against": 114,
+          "win": true,
+          "total": 231
+        }
+      ],
+      "last_full_update": "2025-12-05T12:42:58.989621"
+    },
+    "BKN": {
+      "abbr": "BKN",
+      "name": "Brooklyn Nets",
+      "record": "5-17",
+      "wins": 5,
+      "losses": 17,
+      "win_pct": 0.0,
+      "points_for": 2398,
+      "points_against": 2595,
+      "last_updated": "2025-12-05T12:43:00.492980",
+      "advanced_stats": {
+        "pace": 99.3,
+        "off_rtg": 108.9,
+        "def_rtg": 112.8,
+        "net_rtg": -3.8,
+        "avg_points_for": 108.2,
+        "avg_points_against": 112.0,
+        "avg_total": 220.2,
+        "last_5_wins": 2,
+        "win_rate": 0.4,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-05T00:30Z",
+          "opponent": "UTA",
+          "location": "home",
+          "points_for": 110,
+          "points_against": 123,
+          "win": false,
+          "total": 233
+        },
+        {
+          "date": "2025-12-04T01:00Z",
+          "opponent": "CHI",
+          "location": "away",
+          "points_for": 113,
+          "points_against": 103,
+          "win": true,
+          "total": 216
+        },
+        {
+          "date": "2025-12-02T00:30Z",
+          "opponent": "CHA",
+          "location": "home",
+          "points_for": 116,
+          "points_against": 103,
+          "win": true,
+          "total": 219
+        },
+        {
+          "date": "2025-11-30T01:00Z",
+          "opponent": "MIL",
+          "location": "away",
+          "points_for": 99,
+          "points_against": 116,
+          "win": false,
+          "total": 215
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "PHI",
+          "location": "home",
+          "points_for": 103,
+          "points_against": 115,
+          "win": false,
+          "total": 218
+        }
+      ],
+      "last_full_update": "2025-12-05T12:43:09.574067"
+    },
+    "CHA": {
+      "abbr": "CHA",
+      "name": "Charlotte Hornets",
+      "record": "6-16",
+      "wins": 6,
+      "losses": 16,
+      "win_pct": 0.0,
+      "points_for": 2524,
+      "points_against": 2638,
+      "last_updated": "2025-12-05T12:43:10.316634",
+      "advanced_stats": {
+        "pace": 99.8,
+        "off_rtg": 110.0,
+        "def_rtg": 118.4,
+        "net_rtg": -8.4,
+        "avg_points_for": 109.8,
+        "avg_points_against": 118.2,
+        "avg_total": 228.0,
+        "last_5_wins": 2,
+        "win_rate": 0.4,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T00:30Z",
+          "opponent": "NYK",
+          "location": "away",
+          "points_for": 104,
+          "points_against": 119,
+          "win": false,
+          "total": 223
+        },
+        {
+          "date": "2025-12-02T00:30Z",
+          "opponent": "BKN",
+          "location": "away",
+          "points_for": 103,
+          "points_against": 116,
+          "win": false,
+          "total": 219
+        },
+        {
+          "date": "2025-11-29T23:00Z",
+          "opponent": "TOR",
+          "location": "home",
+          "points_for": 118,
+          "points_against": 111,
+          "win": true,
+          "total": 229
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "CHI",
+          "location": "home",
+          "points_for": 123,
+          "points_against": 116,
+          "win": true,
+          "total": 239
+        },
+        {
+          "date": "2025-11-27T00:00Z",
+          "opponent": "NYK",
+          "location": "home",
+          "points_for": 101,
+          "points_against": 129,
+          "win": false,
+          "total": 230
+        }
+      ],
+      "last_full_update": "2025-12-05T12:43:19.285329"
+    },
+    "CHI": {
+      "abbr": "CHI",
+      "name": "Chicago Bulls",
+      "record": "9-12",
+      "wins": 9,
+      "losses": 12,
+      "win_pct": 0.0,
+      "points_for": 2502,
+      "points_against": 2576,
+      "last_updated": "2025-12-05T12:43:20.699707",
+      "advanced_stats": {
+        "pace": 100.3,
+        "off_rtg": 113.7,
+        "def_rtg": 121.0,
+        "net_rtg": -7.4,
+        "avg_points_for": 114.0,
+        "avg_points_against": 121.4,
+        "avg_total": 235.4,
+        "last_5_wins": 0,
+        "win_rate": 0.0,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T01:00Z",
+          "opponent": "BKN",
+          "location": "home",
+          "points_for": 103,
+          "points_against": 113,
+          "win": false,
+          "total": 216
+        },
+        {
+          "date": "2025-12-02T00:30Z",
+          "opponent": "ORL",
+          "location": "away",
+          "points_for": 120,
+          "points_against": 125,
+          "win": false,
+          "total": 245
+        },
+        {
+          "date": "2025-11-30T00:30Z",
+          "opponent": "IND",
+          "location": "away",
+          "points_for": 101,
+          "points_against": 103,
+          "win": false,
+          "total": 204
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "CHA",
+          "location": "away",
+          "points_for": 116,
+          "points_against": 123,
+          "win": false,
+          "total": 239
+        },
+        {
+          "date": "2025-11-25T01:00Z",
+          "opponent": "NOP",
+          "location": "away",
+          "points_for": 130,
+          "points_against": 143,
+          "win": false,
+          "total": 273
+        }
+      ],
+      "last_full_update": "2025-12-05T12:43:32.345264"
+    },
+    "CLE": {
+      "abbr": "CLE",
+      "name": "Cleveland Cavaliers",
+      "record": "13-10",
+      "wins": 13,
+      "losses": 10,
+      "win_pct": 0.0,
+      "points_for": 2740,
+      "points_against": 2669,
+      "last_updated": "2025-12-05T12:43:33.685696",
+      "advanced_stats": {
+        "pace": 100.3,
+        "off_rtg": 116.0,
+        "def_rtg": 119.2,
+        "net_rtg": -3.2,
+        "avg_points_for": 116.4,
+        "avg_points_against": 119.6,
+        "avg_total": 236.0,
+        "last_5_wins": 1,
+        "win_rate": 0.2,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T00:00Z",
+          "opponent": "POR",
+          "location": "home",
+          "points_for": 110,
+          "points_against": 122,
+          "win": false,
+          "total": 232
+        },
+        {
+          "date": "2025-12-02T00:00Z",
+          "opponent": "IND",
+          "location": "away",
+          "points_for": 135,
+          "points_against": 119,
+          "win": true,
+          "total": 254
+        },
+        {
+          "date": "2025-11-30T23:00Z",
+          "opponent": "BOS",
+          "location": "home",
+          "points_for": 115,
+          "points_against": 117,
+          "win": false,
+          "total": 232
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "ATL",
+          "location": "away",
+          "points_for": 123,
+          "points_against": 130,
+          "win": false,
+          "total": 253
+        },
+        {
+          "date": "2025-11-25T00:00Z",
+          "opponent": "TOR",
+          "location": "away",
+          "points_for": 99,
+          "points_against": 110,
+          "win": false,
+          "total": 209
+        }
+      ],
+      "last_full_update": "2025-12-05T12:43:44.119912"
+    },
+    "DAL": {
+      "abbr": "DAL",
+      "name": "Dallas Mavericks",
+      "record": "8-15",
+      "wins": 8,
+      "losses": 15,
+      "win_pct": 0.0,
+      "points_for": 2563,
+      "points_against": 2662,
+      "last_updated": "2025-12-05T12:43:44.821340",
+      "advanced_stats": {
+        "pace": 100.1,
+        "off_rtg": 116.7,
+        "def_rtg": 114.7,
+        "net_rtg": 2.0,
+        "avg_points_for": 116.8,
+        "avg_points_against": 114.8,
+        "avg_total": 231.6,
+        "last_5_wins": 3,
+        "win_rate": 0.6,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T01:30Z",
+          "opponent": "MIA",
+          "location": "home",
+          "points_for": 118,
+          "points_against": 108,
+          "win": true,
+          "total": 226
+        },
+        {
+          "date": "2025-12-02T02:00Z",
+          "opponent": "DEN",
+          "location": "away",
+          "points_for": 131,
+          "points_against": 121,
+          "win": true,
+          "total": 252
+        },
+        {
+          "date": "2025-11-30T03:00Z",
+          "opponent": "LAC",
+          "location": "away",
+          "points_for": 114,
+          "points_against": 110,
+          "win": true,
+          "total": 224
+        },
+        {
+          "date": "2025-11-29T03:00Z",
+          "opponent": "LAL",
+          "location": "away",
+          "points_for": 119,
+          "points_against": 129,
+          "win": false,
+          "total": 248
+        },
+        {
+          "date": "2025-11-25T00:30Z",
+          "opponent": "MIA",
+          "location": "away",
+          "points_for": 102,
+          "points_against": 106,
+          "win": false,
+          "total": 208
+        }
+      ],
+      "last_full_update": "2025-12-05T12:43:58.635983"
+    },
+    "DEN": {
+      "abbr": "DEN",
+      "name": "Denver Nuggets",
+      "record": "15-6",
+      "wins": 15,
+      "losses": 6,
+      "win_pct": 0.0,
+      "points_for": 2627,
+      "points_against": 2437,
+      "last_updated": "2025-12-05T12:43:59.756772",
+      "advanced_stats": {
+        "pace": 101.4,
+        "off_rtg": 127.6,
+        "def_rtg": 121.7,
+        "net_rtg": 5.9,
+        "avg_points_for": 129.4,
+        "avg_points_against": 123.4,
+        "avg_total": 252.8,
+        "last_5_wins": 3,
+        "win_rate": 0.6,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T00:00Z",
+          "opponent": "IND",
+          "location": "away",
+          "points_for": 135,
+          "points_against": 120,
+          "win": true,
+          "total": 255
+        },
+        {
+          "date": "2025-12-02T02:00Z",
+          "opponent": "DAL",
+          "location": "home",
+          "points_for": 121,
+          "points_against": 131,
+          "win": false,
+          "total": 252
+        },
+        {
+          "date": "2025-11-30T02:00Z",
+          "opponent": "PHX",
+          "location": "away",
+          "points_for": 130,
+          "points_against": 112,
+          "win": true,
+          "total": 242
+        },
+        {
+          "date": "2025-11-29T02:30Z",
+          "opponent": "SAS",
+          "location": "home",
+          "points_for": 136,
+          "points_against": 139,
+          "win": false,
+          "total": 275
+        },
+        {
+          "date": "2025-11-25T01:00Z",
+          "opponent": "MEM",
+          "location": "away",
+          "points_for": 125,
+          "points_against": 115,
+          "win": true,
+          "total": 240
+        }
+      ],
+      "last_full_update": "2025-12-05T12:44:10.857124"
+    },
+    "DET": {
+      "abbr": "DET",
+      "name": "Detroit Pistons",
+      "record": "17-5",
+      "wins": 17,
+      "losses": 5,
+      "win_pct": 0.0,
+      "points_for": 2603,
+      "points_against": 2490,
+      "last_updated": "2025-12-05T12:44:11.616439",
+      "advanced_stats": {
+        "pace": 99.9,
+        "off_rtg": 113.9,
+        "def_rtg": 115.1,
+        "net_rtg": -1.2,
+        "avg_points_for": 113.8,
+        "avg_points_against": 115.0,
+        "avg_total": 228.8,
+        "last_5_wins": 2,
+        "win_rate": 0.4,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T01:00Z",
+          "opponent": "MIL",
+          "location": "away",
+          "points_for": 109,
+          "points_against": 113,
+          "win": false,
+          "total": 222
+        },
+        {
+          "date": "2025-12-02T00:00Z",
+          "opponent": "ATL",
+          "location": "home",
+          "points_for": 99,
+          "points_against": 98,
+          "win": true,
+          "total": 197
+        },
+        {
+          "date": "2025-11-30T01:00Z",
+          "opponent": "MIA",
+          "location": "away",
+          "points_for": 138,
+          "points_against": 135,
+          "win": true,
+          "total": 273
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "ORL",
+          "location": "home",
+          "points_for": 109,
+          "points_against": 112,
+          "win": false,
+          "total": 221
+        },
+        {
+          "date": "2025-11-26T22:00Z",
+          "opponent": "BOS",
+          "location": "away",
+          "points_for": 114,
+          "points_against": 117,
+          "win": false,
+          "total": 231
+        }
+      ],
+      "last_full_update": "2025-12-05T12:44:20.338909"
+    },
+    "GSW": {
+      "abbr": "GSW",
+      "name": "Golden State Warriors",
+      "record": "11-12",
+      "wins": 11,
+      "losses": 12,
+      "win_pct": 0.0,
+      "points_for": 2615,
+      "points_against": 2608,
+      "last_updated": "2025-12-05T12:44:21.053926",
+      "advanced_stats": {
+        "pace": 99.1,
+        "off_rtg": 110.5,
+        "def_rtg": 108.9,
+        "net_rtg": 1.6,
+        "avg_points_for": 109.6,
+        "avg_points_against": 108.0,
+        "avg_total": 217.6,
+        "last_5_wins": 2,
+        "win_rate": 0.4,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-05T00:00Z",
+          "opponent": "PHI",
+          "location": "away",
+          "points_for": 98,
+          "points_against": 99,
+          "win": false,
+          "total": 197
+        },
+        {
+          "date": "2025-12-03T04:00Z",
+          "opponent": "OKC",
+          "location": "home",
+          "points_for": 112,
+          "points_against": 124,
+          "win": false,
+          "total": 236
+        },
+        {
+          "date": "2025-11-30T01:30Z",
+          "opponent": "NOP",
+          "location": "home",
+          "points_for": 104,
+          "points_against": 96,
+          "win": true,
+          "total": 200
+        },
+        {
+          "date": "2025-11-27T03:00Z",
+          "opponent": "HOU",
+          "location": "home",
+          "points_for": 100,
+          "points_against": 104,
+          "win": false,
+          "total": 204
+        },
+        {
+          "date": "2025-11-25T03:00Z",
+          "opponent": "UTA",
+          "location": "home",
+          "points_for": 134,
+          "points_against": 117,
+          "win": true,
+          "total": 251
+        }
+      ],
+      "last_full_update": "2025-12-05T12:44:31.646261"
+    },
+    "HOU": {
+      "abbr": "HOU",
+      "name": "Houston Rockets",
+      "record": "14-5",
+      "wins": 14,
+      "losses": 5,
+      "win_pct": 0.0,
+      "points_for": 2313,
+      "points_against": 2096,
+      "last_updated": "2025-12-05T12:44:32.364914",
+      "advanced_stats": {
+        "pace": 99.5,
+        "off_rtg": 119.2,
+        "def_rtg": 104.7,
+        "net_rtg": 14.5,
+        "avg_points_for": 118.6,
+        "avg_points_against": 104.2,
+        "avg_total": 222.8,
+        "last_5_wins": 4,
+        "win_rate": 0.8,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T01:00Z",
+          "opponent": "SAC",
+          "location": "home",
+          "points_for": 121,
+          "points_against": 95,
+          "win": true,
+          "total": 216
+        },
+        {
+          "date": "2025-12-02T02:00Z",
+          "opponent": "UTA",
+          "location": "away",
+          "points_for": 125,
+          "points_against": 133,
+          "win": false,
+          "total": 258
+        },
+        {
+          "date": "2025-11-30T20:00Z",
+          "opponent": "UTA",
+          "location": "away",
+          "points_for": 129,
+          "points_against": 101,
+          "win": true,
+          "total": 230
+        },
+        {
+          "date": "2025-11-27T03:00Z",
+          "opponent": "GSW",
+          "location": "away",
+          "points_for": 104,
+          "points_against": 100,
+          "win": true,
+          "total": 204
+        },
+        {
+          "date": "2025-11-25T02:30Z",
+          "opponent": "PHX",
+          "location": "away",
+          "points_for": 114,
+          "points_against": 92,
+          "win": true,
+          "total": 206
+        }
+      ],
+      "last_full_update": "2025-12-05T12:44:42.976770"
+    },
+    "IND": {
+      "abbr": "IND",
+      "name": "Indiana Pacers",
+      "record": "4-18",
+      "wins": 4,
+      "losses": 18,
+      "win_pct": 0.0,
+      "points_for": 2434,
+      "points_against": 2642,
+      "last_updated": "2025-12-05T12:44:44.246229",
+      "advanced_stats": {
+        "pace": 99.4,
+        "off_rtg": 111.8,
+        "def_rtg": 111.4,
+        "net_rtg": 0.4,
+        "avg_points_for": 111.2,
+        "avg_points_against": 110.8,
+        "avg_total": 222.0,
+        "last_5_wins": 2,
+        "win_rate": 0.4,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T00:00Z",
+          "opponent": "DEN",
+          "location": "home",
+          "points_for": 120,
+          "points_against": 135,
+          "win": false,
+          "total": 255
+        },
+        {
+          "date": "2025-12-02T00:00Z",
+          "opponent": "CLE",
+          "location": "home",
+          "points_for": 119,
+          "points_against": 135,
+          "win": false,
+          "total": 254
+        },
+        {
+          "date": "2025-11-30T00:30Z",
+          "opponent": "CHI",
+          "location": "home",
+          "points_for": 103,
+          "points_against": 101,
+          "win": true,
+          "total": 204
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "WAS",
+          "location": "home",
+          "points_for": 119,
+          "points_against": 86,
+          "win": true,
+          "total": 205
+        },
+        {
+          "date": "2025-11-27T00:30Z",
+          "opponent": "TOR",
+          "location": "away",
+          "points_for": 95,
+          "points_against": 97,
+          "win": false,
+          "total": 192
+        }
+      ],
+      "last_full_update": "2025-12-05T12:44:53.086934"
+    },
+    "LAC": {
+      "abbr": "LAC",
+      "name": "LA Clippers",
+      "record": "6-16",
+      "wins": 6,
+      "losses": 16,
+      "win_pct": 0.0,
+      "points_for": 2474,
+      "points_against": 2586,
+      "last_updated": "2025-12-05T12:44:54.534511",
+      "advanced_stats": {
+        "pace": 100.2,
+        "off_rtg": 114.4,
+        "def_rtg": 118.4,
+        "net_rtg": -4.0,
+        "avg_points_for": 114.6,
+        "avg_points_against": 118.6,
+        "avg_total": 233.2,
+        "last_5_wins": 1,
+        "win_rate": 0.2,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T00:30Z",
+          "opponent": "ATL",
+          "location": "away",
+          "points_for": 115,
+          "points_against": 92,
+          "win": true,
+          "total": 207
+        },
+        {
+          "date": "2025-12-02T00:30Z",
+          "opponent": "MIA",
+          "location": "away",
+          "points_for": 123,
+          "points_against": 140,
+          "win": false,
+          "total": 263
+        },
+        {
+          "date": "2025-11-30T03:00Z",
+          "opponent": "DAL",
+          "location": "home",
+          "points_for": 110,
+          "points_against": 114,
+          "win": false,
+          "total": 224
+        },
+        {
+          "date": "2025-11-29T03:00Z",
+          "opponent": "MEM",
+          "location": "home",
+          "points_for": 107,
+          "points_against": 112,
+          "win": false,
+          "total": 219
+        },
+        {
+          "date": "2025-11-26T04:00Z",
+          "opponent": "LAL",
+          "location": "away",
+          "points_for": 118,
+          "points_against": 135,
+          "win": false,
+          "total": 253
+        }
+      ],
+      "last_full_update": "2025-12-05T12:45:07.773993"
+    },
+    "MEM": {
+      "abbr": "MEM",
+      "name": "Memphis Grizzlies",
+      "record": "9-13",
+      "wins": 9,
+      "losses": 13,
+      "win_pct": 0.0,
+      "points_for": 2500,
+      "points_against": 2573,
+      "last_updated": "2025-12-05T12:45:09.177414",
+      "advanced_stats": {
+        "pace": 100.4,
+        "off_rtg": 118.3,
+        "def_rtg": 118.1,
+        "net_rtg": 0.2,
+        "avg_points_for": 118.8,
+        "avg_points_against": 118.6,
+        "avg_total": 237.4,
+        "last_5_wins": 3,
+        "win_rate": 0.6,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-03T01:00Z",
+          "opponent": "SAS",
+          "location": "away",
+          "points_for": 119,
+          "points_against": 126,
+          "win": false,
+          "total": 245
+        },
+        {
+          "date": "2025-12-01T02:00Z",
+          "opponent": "SAC",
+          "location": "away",
+          "points_for": 115,
+          "points_against": 107,
+          "win": true,
+          "total": 222
+        },
+        {
+          "date": "2025-11-29T03:00Z",
+          "opponent": "LAC",
+          "location": "away",
+          "points_for": 112,
+          "points_against": 107,
+          "win": true,
+          "total": 219
+        },
+        {
+          "date": "2025-11-27T01:00Z",
+          "opponent": "NOP",
+          "location": "away",
+          "points_for": 133,
+          "points_against": 128,
+          "win": true,
+          "total": 261
+        },
+        {
+          "date": "2025-11-25T01:00Z",
+          "opponent": "DEN",
+          "location": "home",
+          "points_for": 115,
+          "points_against": 125,
+          "win": false,
+          "total": 240
+        }
+      ],
+      "last_full_update": "2025-12-05T12:45:20.292375"
+    },
+    "MIA": {
+      "abbr": "MIA",
+      "name": "Miami Heat",
+      "record": "14-8",
+      "wins": 14,
+      "losses": 8,
+      "win_pct": 0.0,
+      "points_for": 2719,
+      "points_against": 2605,
+      "last_updated": "2025-12-05T12:45:21.565973",
+      "advanced_stats": {
+        "pace": 100.3,
+        "off_rtg": 118.6,
+        "def_rtg": 116.4,
+        "net_rtg": 2.2,
+        "avg_points_for": 119.0,
+        "avg_points_against": 116.8,
+        "avg_total": 235.8,
+        "last_5_wins": 3,
+        "win_rate": 0.6,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T01:30Z",
+          "opponent": "DAL",
+          "location": "away",
+          "points_for": 108,
+          "points_against": 118,
+          "win": false,
+          "total": 226
+        },
+        {
+          "date": "2025-12-02T00:30Z",
+          "opponent": "LAC",
+          "location": "home",
+          "points_for": 140,
+          "points_against": 123,
+          "win": true,
+          "total": 263
+        },
+        {
+          "date": "2025-11-30T01:00Z",
+          "opponent": "DET",
+          "location": "home",
+          "points_for": 135,
+          "points_against": 138,
+          "win": false,
+          "total": 273
+        },
+        {
+          "date": "2025-11-27T00:30Z",
+          "opponent": "MIL",
+          "location": "home",
+          "points_for": 106,
+          "points_against": 103,
+          "win": true,
+          "total": 209
+        },
+        {
+          "date": "2025-11-25T00:30Z",
+          "opponent": "DAL",
+          "location": "home",
+          "points_for": 106,
+          "points_against": 102,
+          "win": true,
+          "total": 208
+        }
+      ],
+      "last_full_update": "2025-12-05T12:45:31.882088"
+    },
+    "MIL": {
+      "abbr": "MIL",
+      "name": "Milwaukee Bucks",
+      "record": "10-13",
+      "wins": 10,
+      "losses": 13,
+      "win_pct": 0.0,
+      "points_for": 2664,
+      "points_against": 2709,
+      "last_updated": "2025-12-05T12:45:32.603126",
+      "advanced_stats": {
+        "pace": 99.7,
+        "off_rtg": 113.8,
+        "def_rtg": 112.6,
+        "net_rtg": 1.2,
+        "avg_points_for": 113.4,
+        "avg_points_against": 112.2,
+        "avg_total": 225.6,
+        "last_5_wins": 2,
+        "win_rate": 0.4,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T01:00Z",
+          "opponent": "DET",
+          "location": "home",
+          "points_for": 113,
+          "points_against": 109,
+          "win": true,
+          "total": 222
+        },
+        {
+          "date": "2025-12-02T00:00Z",
+          "opponent": "WAS",
+          "location": "away",
+          "points_for": 126,
+          "points_against": 129,
+          "win": false,
+          "total": 255
+        },
+        {
+          "date": "2025-11-30T01:00Z",
+          "opponent": "BKN",
+          "location": "home",
+          "points_for": 116,
+          "points_against": 99,
+          "win": true,
+          "total": 215
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "NYK",
+          "location": "away",
+          "points_for": 109,
+          "points_against": 118,
+          "win": false,
+          "total": 227
+        },
+        {
+          "date": "2025-11-27T00:30Z",
+          "opponent": "MIA",
+          "location": "away",
+          "points_for": 103,
+          "points_against": 106,
+          "win": false,
+          "total": 209
+        }
+      ],
+      "last_full_update": "2025-12-05T12:45:41.239377"
+    },
+    "MIN": {
+      "abbr": "MIN",
+      "name": "Minnesota Timberwolves",
+      "record": "14-8",
+      "wins": 14,
+      "losses": 8,
+      "win_pct": 0.0,
+      "points_for": 2657,
+      "points_against": 2540,
+      "last_updated": "2025-12-05T12:45:41.973233",
+      "advanced_stats": {
+        "pace": 100.9,
+        "off_rtg": 123.5,
+        "def_rtg": 118.6,
+        "net_rtg": 5.0,
+        "avg_points_for": 124.6,
+        "avg_points_against": 119.6,
+        "avg_total": 244.2,
+        "last_5_wins": 4,
+        "win_rate": 0.8,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-05T01:00Z",
+          "opponent": "NOP",
+          "location": "away",
+          "points_for": 125,
+          "points_against": 116,
+          "win": true,
+          "total": 241
+        },
+        {
+          "date": "2025-12-03T01:00Z",
+          "opponent": "NOP",
+          "location": "away",
+          "points_for": 149,
+          "points_against": 142,
+          "win": true,
+          "total": 291
+        },
+        {
+          "date": "2025-12-01T00:00Z",
+          "opponent": "SAS",
+          "location": "home",
+          "points_for": 125,
+          "points_against": 112,
+          "win": true,
+          "total": 237
+        },
+        {
+          "date": "2025-11-29T22:00Z",
+          "opponent": "BOS",
+          "location": "home",
+          "points_for": 119,
+          "points_against": 115,
+          "win": true,
+          "total": 234
+        },
+        {
+          "date": "2025-11-27T00:30Z",
+          "opponent": "OKC",
+          "location": "away",
+          "points_for": 105,
+          "points_against": 113,
+          "win": false,
+          "total": 218
+        }
+      ],
+      "last_full_update": "2025-12-05T12:45:50.427827"
+    },
+    "NOP": {
+      "abbr": "NOP",
+      "name": "New Orleans Pelicans",
+      "record": "3-20",
+      "wins": 3,
+      "losses": 20,
+      "win_pct": 0.0,
+      "points_for": 2593,
+      "points_against": 2838,
+      "last_updated": "2025-12-05T12:45:59.739263",
+      "advanced_stats": {
+        "pace": 101.2,
+        "off_rtg": 119.2,
+        "def_rtg": 127.3,
+        "net_rtg": -8.1,
+        "avg_points_for": 120.6,
+        "avg_points_against": 128.8,
+        "avg_total": 249.4,
+        "last_5_wins": 0,
+        "win_rate": 0.0,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-05T01:00Z",
+          "opponent": "MIN",
+          "location": "home",
+          "points_for": 116,
+          "points_against": 125,
+          "win": false,
+          "total": 241
+        },
+        {
+          "date": "2025-12-03T01:00Z",
+          "opponent": "MIN",
+          "location": "home",
+          "points_for": 142,
+          "points_against": 149,
+          "win": false,
+          "total": 291
+        },
+        {
+          "date": "2025-12-01T02:30Z",
+          "opponent": "LAL",
+          "location": "away",
+          "points_for": 121,
+          "points_against": 133,
+          "win": false,
+          "total": 254
+        },
+        {
+          "date": "2025-11-30T01:30Z",
+          "opponent": "GSW",
+          "location": "away",
+          "points_for": 96,
+          "points_against": 104,
+          "win": false,
+          "total": 200
+        },
+        {
+          "date": "2025-11-27T01:00Z",
+          "opponent": "MEM",
+          "location": "home",
+          "points_for": 128,
+          "points_against": 133,
+          "win": false,
+          "total": 261
+        }
+      ],
+      "last_full_update": "2025-12-05T12:46:11.580298"
+    },
+    "NYK": {
+      "abbr": "NYK",
+      "name": "New York Knicks",
+      "record": "14-7",
+      "wins": 14,
+      "losses": 7,
+      "win_pct": 0.0,
+      "points_for": 2524,
+      "points_against": 2373,
+      "last_updated": "2025-12-05T12:46:10.265544",
+      "advanced_stats": {
+        "pace": 99.7,
+        "off_rtg": 120.2,
+        "def_rtg": 106.5,
+        "net_rtg": 13.6,
+        "avg_points_for": 119.8,
+        "avg_points_against": 106.2,
+        "avg_total": 226.0,
+        "last_5_wins": 4,
+        "win_rate": 0.8,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T00:30Z",
+          "opponent": "CHA",
+          "location": "home",
+          "points_for": 119,
+          "points_against": 104,
+          "win": true,
+          "total": 223
+        },
+        {
+          "date": "2025-12-03T01:00Z",
+          "opponent": "BOS",
+          "location": "away",
+          "points_for": 117,
+          "points_against": 123,
+          "win": false,
+          "total": 240
+        },
+        {
+          "date": "2025-11-30T23:00Z",
+          "opponent": "TOR",
+          "location": "home",
+          "points_for": 116,
+          "points_against": 94,
+          "win": true,
+          "total": 210
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "MIL",
+          "location": "home",
+          "points_for": 118,
+          "points_against": 109,
+          "win": true,
+          "total": 227
+        },
+        {
+          "date": "2025-11-27T00:00Z",
+          "opponent": "CHA",
+          "location": "away",
+          "points_for": 129,
+          "points_against": 101,
+          "win": true,
+          "total": 230
+        }
+      ],
+      "last_full_update": "2025-12-05T12:46:20.352795"
+    },
+    "OKC": {
+      "abbr": "OKC",
+      "name": "Oklahoma City Thunder",
+      "record": "21-1",
+      "wins": 21,
+      "losses": 1,
+      "win_pct": 0.0,
+      "points_for": 2690,
+      "points_against": 2353,
+      "last_updated": "2025-12-05T12:46:21.084023",
+      "advanced_stats": {
+        "pace": 100.0,
+        "off_rtg": 121.0,
+        "def_rtg": 109.2,
+        "net_rtg": 11.8,
+        "avg_points_for": 121.0,
+        "avg_points_against": 109.2,
+        "avg_total": 230.2,
+        "last_5_wins": 5,
+        "win_rate": 1.0,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-03T04:00Z",
+          "opponent": "GSW",
+          "location": "away",
+          "points_for": 124,
+          "points_against": 112,
+          "win": true,
+          "total": 236
+        },
+        {
+          "date": "2025-11-30T23:00Z",
+          "opponent": "POR",
+          "location": "away",
+          "points_for": 123,
+          "points_against": 115,
+          "win": true,
+          "total": 238
+        },
+        {
+          "date": "2025-11-29T02:30Z",
+          "opponent": "PHX",
+          "location": "home",
+          "points_for": 123,
+          "points_against": 119,
+          "win": true,
+          "total": 242
+        },
+        {
+          "date": "2025-11-27T00:30Z",
+          "opponent": "MIN",
+          "location": "home",
+          "points_for": 113,
+          "points_against": 105,
+          "win": true,
+          "total": 218
+        },
+        {
+          "date": "2025-11-24T00:00Z",
+          "opponent": "POR",
+          "location": "home",
+          "points_for": 122,
+          "points_against": 95,
+          "win": true,
+          "total": 217
+        }
+      ],
+      "last_full_update": "2025-12-05T12:46:33.339697"
+    },
+    "ORL": {
+      "abbr": "ORL",
+      "name": "Orlando Magic",
+      "record": "13-9",
+      "wins": 13,
+      "losses": 9,
+      "win_pct": 0.0,
+      "points_for": 2622,
+      "points_against": 2515,
+      "last_updated": "2025-12-05T12:46:34.088361",
+      "advanced_stats": {
+        "pace": 100.7,
+        "off_rtg": 123.6,
+        "def_rtg": 116.0,
+        "net_rtg": 7.5,
+        "avg_points_for": 124.4,
+        "avg_points_against": 116.8,
+        "avg_total": 241.2,
+        "last_5_wins": 3,
+        "win_rate": 0.6,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T00:00Z",
+          "opponent": "SAS",
+          "location": "home",
+          "points_for": 112,
+          "points_against": 114,
+          "win": false,
+          "total": 226
+        },
+        {
+          "date": "2025-12-02T00:30Z",
+          "opponent": "CHI",
+          "location": "home",
+          "points_for": 125,
+          "points_against": 120,
+          "win": true,
+          "total": 245
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "DET",
+          "location": "away",
+          "points_for": 112,
+          "points_against": 109,
+          "win": true,
+          "total": 221
+        },
+        {
+          "date": "2025-11-26T01:00Z",
+          "opponent": "PHI",
+          "location": "away",
+          "points_for": 144,
+          "points_against": 103,
+          "win": true,
+          "total": 247
+        },
+        {
+          "date": "2025-11-23T23:00Z",
+          "opponent": "BOS",
+          "location": "away",
+          "points_for": 129,
+          "points_against": 138,
+          "win": false,
+          "total": 267
+        }
+      ],
+      "last_full_update": "2025-12-05T12:46:47.001672"
+    },
+    "PHI": {
+      "abbr": "PHI",
+      "name": "Philadelphia 76ers",
+      "record": "12-9",
+      "wins": 12,
+      "losses": 9,
+      "win_pct": 0.0,
+      "points_for": 2465,
+      "points_against": 2458,
+      "last_updated": "2025-12-05T12:46:48.035574",
+      "advanced_stats": {
+        "pace": 100.1,
+        "off_rtg": 114.3,
+        "def_rtg": 117.7,
+        "net_rtg": -3.4,
+        "avg_points_for": 114.4,
+        "avg_points_against": 117.8,
+        "avg_total": 232.2,
+        "last_5_wins": 3,
+        "win_rate": 0.6,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-05T00:00Z",
+          "opponent": "GSW",
+          "location": "home",
+          "points_for": 99,
+          "points_against": 98,
+          "win": true,
+          "total": 197
+        },
+        {
+          "date": "2025-12-03T00:00Z",
+          "opponent": "WAS",
+          "location": "home",
+          "points_for": 121,
+          "points_against": 102,
+          "win": true,
+          "total": 223
+        },
+        {
+          "date": "2025-11-30T23:00Z",
+          "opponent": "ATL",
+          "location": "home",
+          "points_for": 134,
+          "points_against": 142,
+          "win": false,
+          "total": 276
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "BKN",
+          "location": "away",
+          "points_for": 115,
+          "points_against": 103,
+          "win": true,
+          "total": 218
+        },
+        {
+          "date": "2025-11-26T01:00Z",
+          "opponent": "ORL",
+          "location": "home",
+          "points_for": 103,
+          "points_against": 144,
+          "win": false,
+          "total": 247
+        }
+      ],
+      "last_full_update": "2025-12-05T12:46:59.416279"
+    },
+    "PHX": {
+      "abbr": "PHX",
+      "name": "Phoenix Suns",
+      "record": "13-9",
+      "wins": 13,
+      "losses": 9,
+      "win_pct": 0.0,
+      "points_for": 2575,
+      "points_against": 2501,
+      "last_updated": "2025-12-05T12:47:00.396466",
+      "advanced_stats": {
+        "pace": 99.8,
+        "off_rtg": 112.3,
+        "def_rtg": 115.3,
+        "net_rtg": -3.0,
+        "avg_points_for": 112.0,
+        "avg_points_against": 115.0,
+        "avg_total": 227.0,
+        "last_5_wins": 2,
+        "win_rate": 0.4,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-02T03:00Z",
+          "opponent": "LAL",
+          "location": "away",
+          "points_for": 125,
+          "points_against": 108,
+          "win": true,
+          "total": 233
+        },
+        {
+          "date": "2025-11-30T02:00Z",
+          "opponent": "DEN",
+          "location": "home",
+          "points_for": 112,
+          "points_against": 130,
+          "win": false,
+          "total": 242
+        },
+        {
+          "date": "2025-11-29T02:30Z",
+          "opponent": "OKC",
+          "location": "away",
+          "points_for": 119,
+          "points_against": 123,
+          "win": false,
+          "total": 242
+        },
+        {
+          "date": "2025-11-27T03:00Z",
+          "opponent": "SAC",
+          "location": "away",
+          "points_for": 112,
+          "points_against": 100,
+          "win": true,
+          "total": 212
+        },
+        {
+          "date": "2025-11-25T02:30Z",
+          "opponent": "HOU",
+          "location": "home",
+          "points_for": 92,
+          "points_against": 114,
+          "win": false,
+          "total": 206
+        }
+      ],
+      "last_full_update": "2025-12-05T12:47:13.328874"
+    },
+    "POR": {
+      "abbr": "POR",
+      "name": "Portland Trail Blazers",
+      "record": "9-13",
+      "wins": 9,
+      "losses": 13,
+      "win_pct": 0.0,
+      "points_for": 2605,
+      "points_against": 2654,
+      "last_updated": "2025-12-05T12:47:14.186836",
+      "advanced_stats": {
+        "pace": 99.9,
+        "off_rtg": 114.5,
+        "def_rtg": 114.5,
+        "net_rtg": 0.0,
+        "avg_points_for": 114.4,
+        "avg_points_against": 114.4,
+        "avg_total": 228.8,
+        "last_5_wins": 2,
+        "win_rate": 0.4,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T00:00Z",
+          "opponent": "CLE",
+          "location": "away",
+          "points_for": 122,
+          "points_against": 110,
+          "win": true,
+          "total": 232
+        },
+        {
+          "date": "2025-12-03T00:30Z",
+          "opponent": "TOR",
+          "location": "away",
+          "points_for": 118,
+          "points_against": 121,
+          "win": false,
+          "total": 239
+        },
+        {
+          "date": "2025-11-30T23:00Z",
+          "opponent": "OKC",
+          "location": "home",
+          "points_for": 115,
+          "points_against": 123,
+          "win": false,
+          "total": 238
+        },
+        {
+          "date": "2025-11-27T03:00Z",
+          "opponent": "SAS",
+          "location": "home",
+          "points_for": 102,
+          "points_against": 115,
+          "win": false,
+          "total": 217
+        },
+        {
+          "date": "2025-11-25T01:00Z",
+          "opponent": "MIL",
+          "location": "away",
+          "points_for": 115,
+          "points_against": 103,
+          "win": true,
+          "total": 218
+        }
+      ],
+      "last_full_update": "2025-12-05T12:47:27.073414"
+    },
+    "SAC": {
+      "abbr": "SAC",
+      "name": "Sacramento Kings",
+      "record": "5-17",
+      "wins": 5,
+      "losses": 17,
+      "win_pct": 0.0,
+      "points_for": 2442,
+      "points_against": 2702,
+      "last_updated": "2025-12-05T12:47:28.649598",
+      "advanced_stats": {
+        "pace": 99.6,
+        "off_rtg": 108.0,
+        "def_rtg": 118.0,
+        "net_rtg": -10.0,
+        "avg_points_for": 107.6,
+        "avg_points_against": 117.6,
+        "avg_total": 225.2,
+        "last_5_wins": 1,
+        "win_rate": 0.2,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T01:00Z",
+          "opponent": "HOU",
+          "location": "away",
+          "points_for": 95,
+          "points_against": 121,
+          "win": false,
+          "total": 216
+        },
+        {
+          "date": "2025-12-01T02:00Z",
+          "opponent": "MEM",
+          "location": "home",
+          "points_for": 107,
+          "points_against": 115,
+          "win": false,
+          "total": 222
+        },
+        {
+          "date": "2025-11-29T02:30Z",
+          "opponent": "UTA",
+          "location": "away",
+          "points_for": 119,
+          "points_against": 128,
+          "win": false,
+          "total": 247
+        },
+        {
+          "date": "2025-11-27T03:00Z",
+          "opponent": "PHX",
+          "location": "home",
+          "points_for": 100,
+          "points_against": 112,
+          "win": false,
+          "total": 212
+        },
+        {
+          "date": "2025-11-25T03:00Z",
+          "opponent": "MIN",
+          "location": "home",
+          "points_for": 117,
+          "points_against": 112,
+          "win": true,
+          "total": 229
+        }
+      ],
+      "last_full_update": "2025-12-05T12:47:41.354335"
+    },
+    "SAS": {
+      "abbr": "SAS",
+      "name": "San Antonio Spurs",
+      "record": "15-6",
+      "wins": 15,
+      "losses": 6,
+      "win_pct": 0.0,
+      "points_for": 2498,
+      "points_against": 2389,
+      "last_updated": "2025-12-05T12:47:42.954826",
+      "advanced_stats": {
+        "pace": 100.6,
+        "off_rtg": 120.5,
+        "def_rtg": 118.1,
+        "net_rtg": 2.4,
+        "avg_points_for": 121.2,
+        "avg_points_against": 118.8,
+        "avg_total": 240.0,
+        "last_5_wins": 4,
+        "win_rate": 0.8,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-04T00:00Z",
+          "opponent": "ORL",
+          "location": "away",
+          "points_for": 114,
+          "points_against": 112,
+          "win": true,
+          "total": 226
+        },
+        {
+          "date": "2025-12-03T01:00Z",
+          "opponent": "MEM",
+          "location": "home",
+          "points_for": 126,
+          "points_against": 119,
+          "win": true,
+          "total": 245
+        },
+        {
+          "date": "2025-12-01T00:00Z",
+          "opponent": "MIN",
+          "location": "away",
+          "points_for": 112,
+          "points_against": 125,
+          "win": false,
+          "total": 237
+        },
+        {
+          "date": "2025-11-29T02:30Z",
+          "opponent": "DEN",
+          "location": "away",
+          "points_for": 139,
+          "points_against": 136,
+          "win": true,
+          "total": 275
+        },
+        {
+          "date": "2025-11-27T03:00Z",
+          "opponent": "POR",
+          "location": "away",
+          "points_for": 115,
+          "points_against": 102,
+          "win": true,
+          "total": 217
+        }
+      ],
+      "last_full_update": "2025-12-05T12:47:54.468668"
+    },
+    "TOR": {
+      "abbr": "TOR",
+      "name": "Toronto Raptors",
+      "record": "15-8",
+      "wins": 15,
+      "losses": 8,
+      "win_pct": 0.0,
+      "points_for": 2710,
+      "points_against": 2612,
+      "last_updated": "2025-12-05T12:47:55.520136",
+      "advanced_stats": {
+        "pace": 99.5,
+        "off_rtg": 109.2,
+        "def_rtg": 114.6,
+        "net_rtg": -5.4,
+        "avg_points_for": 108.6,
+        "avg_points_against": 114.0,
+        "avg_total": 222.6,
+        "last_5_wins": 2,
+        "win_rate": 0.4,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-05T00:30Z",
+          "opponent": "LAL",
+          "location": "home",
+          "points_for": 120,
+          "points_against": 123,
+          "win": false,
+          "total": 243
+        },
+        {
+          "date": "2025-12-03T00:30Z",
+          "opponent": "POR",
+          "location": "home",
+          "points_for": 121,
+          "points_against": 118,
+          "win": true,
+          "total": 239
+        },
+        {
+          "date": "2025-11-30T23:00Z",
+          "opponent": "NYK",
+          "location": "away",
+          "points_for": 94,
+          "points_against": 116,
+          "win": false,
+          "total": 210
+        },
+        {
+          "date": "2025-11-29T23:00Z",
+          "opponent": "CHA",
+          "location": "away",
+          "points_for": 111,
+          "points_against": 118,
+          "win": false,
+          "total": 229
+        },
+        {
+          "date": "2025-11-27T00:30Z",
+          "opponent": "IND",
+          "location": "home",
+          "points_for": 97,
+          "points_against": 95,
+          "win": true,
+          "total": 192
+        }
+      ],
+      "last_full_update": "2025-12-05T12:48:07.017823"
+    },
+    "UTA": {
+      "abbr": "UTA",
+      "name": "Utah Jazz",
+      "record": "8-13",
+      "wins": 8,
+      "losses": 13,
+      "win_pct": 0.0,
+      "points_for": 2491,
+      "points_against": 2617,
+      "last_updated": "2025-12-05T12:48:08.904940",
+      "advanced_stats": {
+        "pace": 100.8,
+        "off_rtg": 119.4,
+        "def_rtg": 122.4,
+        "net_rtg": -3.0,
+        "avg_points_for": 120.4,
+        "avg_points_against": 123.4,
+        "avg_total": 243.8,
+        "last_5_wins": 3,
+        "win_rate": 0.6,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-05T00:30Z",
+          "opponent": "BKN",
+          "location": "away",
+          "points_for": 123,
+          "points_against": 110,
+          "win": true,
+          "total": 233
+        },
+        {
+          "date": "2025-12-02T02:00Z",
+          "opponent": "HOU",
+          "location": "home",
+          "points_for": 133,
+          "points_against": 125,
+          "win": true,
+          "total": 258
+        },
+        {
+          "date": "2025-11-30T20:00Z",
+          "opponent": "HOU",
+          "location": "home",
+          "points_for": 101,
+          "points_against": 129,
+          "win": false,
+          "total": 230
+        },
+        {
+          "date": "2025-11-29T02:30Z",
+          "opponent": "SAC",
+          "location": "home",
+          "points_for": 128,
+          "points_against": 119,
+          "win": true,
+          "total": 247
+        },
+        {
+          "date": "2025-11-25T03:00Z",
+          "opponent": "GSW",
+          "location": "away",
+          "points_for": 117,
+          "points_against": 134,
+          "win": false,
+          "total": 251
+        }
+      ],
+      "last_full_update": "2025-12-05T12:48:24.080432"
+    },
+    "WAS": {
+      "abbr": "WAS",
+      "name": "Washington Wizards",
+      "record": "3-18",
+      "wins": 3,
+      "losses": 18,
+      "win_pct": 0.0,
+      "points_for": 2357,
+      "points_against": 2691,
+      "last_updated": "2025-12-05T12:48:25.652805",
+      "advanced_stats": {
+        "pace": 100.3,
+        "off_rtg": 109.7,
+        "def_rtg": 124.7,
+        "net_rtg": -15.0,
+        "avg_points_for": 110.0,
+        "avg_points_against": 125.0,
+        "avg_total": 235.0,
+        "last_5_wins": 2,
+        "win_rate": 0.4,
+        "source": "estimated",
+        "games_analyzed": 5
+      },
+      "game_log": [
+        {
+          "date": "2025-12-05T00:00Z",
+          "opponent": "BOS",
+          "location": "home",
+          "points_for": 101,
+          "points_against": 146,
+          "win": false,
+          "total": 247
+        },
+        {
+          "date": "2025-12-03T00:00Z",
+          "opponent": "PHI",
+          "location": "away",
+          "points_for": 102,
+          "points_against": 121,
+          "win": false,
+          "total": 223
+        },
+        {
+          "date": "2025-12-02T00:00Z",
+          "opponent": "MIL",
+          "location": "home",
+          "points_for": 129,
+          "points_against": 126,
+          "win": true,
+          "total": 255
+        },
+        {
+          "date": "2025-11-29T00:30Z",
+          "opponent": "IND",
+          "location": "away",
+          "points_for": 86,
+          "points_against": 119,
+          "win": false,
+          "total": 205
+        },
+        {
+          "date": "2025-11-26T00:00Z",
+          "opponent": "ATL",
+          "location": "home",
+          "points_for": 132,
+          "points_against": 113,
+          "win": true,
+          "total": 245
+        }
+      ],
+      "last_full_update": "2025-12-05T12:48:40.950288"
+    }
+  },
+  "matchups": {
+    "ATL@BOS": {
+      "analysis": {
+        "away": "ATL",
+        "home": "BOS",
+        "pace_expected": 100.3,
+        "total_expected": 236.2,
+        "efficiency_gap": 15.9,
+        "favorite": "BOS",
+        "underdog": "ATL",
+        "favorite_by": 15.9,
+        "matchup_signals": [
+          "TOTAL_ALTO",
+          "BOS_QUENTE",
+          "BOS_VS_DEF_RUIM"
+        ],
+        "pace_signal": "NEUTRO",
+        "total_signal": "ALTO",
+        "away_off_rtg": 114.6,
+        "away_def_rtg": 120.2,
+        "home_off_rtg": 123.1,
+        "home_def_rtg": 112.8,
+        "away_pace": 100.3,
+        "home_pace": 100.4,
+        "calculated_at": "2025-12-05T12:51:10.451235"
+      },
+      "calculated_at": "2025-12-05T12:51:10.451243"
+    },
+    "ATL@BKN": {
+      "analysis": {
+        "away": "ATL",
+        "home": "BKN",
+        "pace_expected": 99.8,
+        "total_expected": 227.9,
+        "efficiency_gap": 1.7,
+        "favorite": null,
+        "underdog": null,
+        "favorite_by": 0.0,
+        "matchup_signals": [
+          "BKN_VS_DEF_RUIM"
+        ],
+        "pace_signal": "NEUTRO",
+        "total_signal": "NEUTRO",
+        "away_off_rtg": 114.6,
+        "away_def_rtg": 120.2,
+        "home_off_rtg": 108.9,
+        "home_def_rtg": 112.8,
+        "away_pace": 100.3,
+        "home_pace": 99.3,
+        "calculated_at": "2025-12-05T12:51:02.327747"
+      },
+      "calculated_at": "2025-12-05T12:51:02.327756"
+    },
+    "ATL@CHA": {
+      "analysis": {
+        "away": "ATL",
+        "home": "CHA",
+        "pace_expected": 100.0,
+        "total_expected": 231.8,
+        "efficiency_gap": -2.8,
+        "favorite": null,
+        "underdog": null,
+        "favorite_by": 0.0,
+        "matchup_signals": [
+          "ATL_VS_DEF_RUIM",
+          "CHA_VS_DEF_RUIM"
+        ],
+        "pace_signal": "NEUTRO",
+        "total_signal": "NEUTRO",
+        "away_off_rtg": 114.6,
+        "away_def_rtg": 120.2,
+        "home_off_rtg": 110.0,
+        "home_def_rtg": 118.4,
+        "away_pace": 100.3,
+        "home_pace": 99.8,
+        "calculated_at": "2025-12-05T12:51:07.397308"
+      },
+      "calculated_at": "2025-12-05T12:51:07.397316"
+    },
+    "DAL@CHI": {
+      "analysis": {
+        "away": "DAL",
+        "home": "CHI",
+        "pace_expected": 100.2,
+        "total_expected": 233.5,
+        "efficiency_gap": -9.3,
+        "favorite": "DAL",
+        "underdog": "CHI",
+        "favorite_by": 9.3,
+        "matchup_signals": [
+          "TOTAL_ALTO",
+          "CHI_FRIO",
+          "DAL_VS_DEF_RUIM"
+        ],
+        "pace_signal": "NEUTRO",
+        "total_signal": "ALTO",
+        "away_off_rtg": 116.7,
+        "away_def_rtg": 114.7,
+        "home_off_rtg": 113.7,
+        "home_def_rtg": 121.0,
+        "away_pace": 100.1,
+        "home_pace": 100.3,
+        "calculated_at": "2025-12-05T12:51:17.733523"
+      },
+      "calculated_at": "2025-12-05T12:51:17.733531"
+    },
+    "LAL@GSW": {
+      "analysis": {
+        "away": "LAL",
+        "home": "GSW",
+        "pace_expected": 100.0,
+        "total_expected": 231.9,
+        "efficiency_gap": -3.4,
+        "favorite": "LAL",
+        "underdog": "GSW",
+        "favorite_by": 3.4,
+        "matchup_signals": [
+          "LAL_QUENTE",
+          "GSW_VS_DEF_RUIM"
+        ],
+        "pace_signal": "NEUTRO",
+        "total_signal": "NEUTRO",
+        "away_off_rtg": 124.4,
+        "away_def_rtg": 119.4,
+        "home_off_rtg": 110.5,
+        "home_def_rtg": 108.9,
+        "away_pace": 101.0,
+        "home_pace": 99.1,
+        "calculated_at": "2025-12-05T12:51:49.156588"
+      },
+      "calculated_at": "2025-12-05T12:51:49.156595"
+    },
+    "BOS@GSW": {
+      "analysis": {
+        "away": "BOS",
+        "home": "GSW",
+        "pace_expected": 99.8,
+        "total_expected": 227.2,
+        "efficiency_gap": -8.7,
+        "favorite": "BOS",
+        "underdog": "GSW",
+        "favorite_by": 8.7,
+        "matchup_signals": [
+          "BOS_QUENTE"
+        ],
+        "pace_signal": "NEUTRO",
+        "total_signal": "NEUTRO",
+        "away_off_rtg": 123.1,
+        "away_def_rtg": 112.8,
+        "home_off_rtg": 110.5,
+        "home_def_rtg": 108.9,
+        "away_pace": 100.4,
+        "home_pace": 99.1,
+        "calculated_at": "2025-12-05T12:52:04.283413"
+      },
+      "calculated_at": "2025-12-05T12:52:04.283421"
+    }
+  }
+}

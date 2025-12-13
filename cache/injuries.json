@@ -1,0 +1,40 @@
+{
+  "LAL": [
+    {
+      "player": "Anthony Davis",
+      "status": "Day-To-Day",
+      "detail": "Hip"
+    },
+    {
+      "player": "Gabe Vincent",
+      "status": "Out",
+      "detail": "Knee"
+    }
+  ],
+  "BOS": [
+    {
+      "player": "Kristaps Porzingis",
+      "status": "Out",
+      "detail": "Calf"
+    },
+    {
+      "player": "Jrue Holiday",
+      "status": "Questionable",
+      "detail": "Ankle"
+    }
+  ],
+  "GSW": [
+    {
+      "player": "Gary Payton II",
+      "status": "Out",
+      "detail": "Hamstring"
+    }
+  ],
+  "MIA": [
+    {
+      "player": "Jimmy Butler",
+      "status": "Day-To-Day",
+      "detail": "Ankle"
+    }
+  ]
+}

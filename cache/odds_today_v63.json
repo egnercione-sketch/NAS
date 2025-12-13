@@ -1,0 +1,126 @@
+{
+  "odds": {
+    "LAL@BOS": {
+      "spread": -7.0,
+      "total": 223.5,
+      "home_team": "BOS",
+      "away_team": "LAL",
+      "last_update": "2025-12-06T00:10:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "MIA@ORL": {
+      "spread": -5.5,
+      "total": 240.5,
+      "home_team": "ORL",
+      "away_team": "MIA",
+      "last_update": "2025-12-09T23:00:00Z",
+      "bookmaker": "DraftKings"
+    },
+    "DEN@ATL": {
+      "spread": 6.5,
+      "total": 238.5,
+      "home_team": "ATL",
+      "away_team": "DEN",
+      "last_update": "2025-12-06T00:40:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "CHA@TOR": {
+      "spread": -8.5,
+      "total": 230.5,
+      "home_team": "TOR",
+      "away_team": "CHA",
+      "last_update": "2025-12-06T00:40:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "SA@CLE": {
+      "spread": -5.0,
+      "total": 238.5,
+      "home_team": "CLE",
+      "away_team": "SA",
+      "last_update": "2025-12-06T00:40:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "POR@DET": {
+      "spread": -7.5,
+      "total": 236.5,
+      "home_team": "DET",
+      "away_team": "POR",
+      "last_update": "2025-12-06T00:40:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "UTAH@NYK": {
+      "spread": -16.0,
+      "total": 240.5,
+      "home_team": "NYK",
+      "away_team": "UTAH",
+      "last_update": "2025-12-06T00:40:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "IND@CHI": {
+      "spread": -4.5,
+      "total": 237.5,
+      "home_team": "CHI",
+      "away_team": "IND",
+      "last_update": "2025-12-06T01:10:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "PHX@HOU": {
+      "spread": -11.5,
+      "total": 222.5,
+      "home_team": "HOU",
+      "away_team": "PHX",
+      "last_update": "2025-12-06T01:10:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "LAC@MEM": {
+      "spread": 1.5,
+      "total": 223.5,
+      "home_team": "MEM",
+      "away_team": "LAC",
+      "last_update": "2025-12-06T01:10:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "PHI@MIL": {
+      "spread": 1.0,
+      "total": 223.5,
+      "home_team": "MIL",
+      "away_team": "PHI",
+      "last_update": "2025-12-06T01:10:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "DAL@OKC": {
+      "spread": -15.5,
+      "total": 228.5,
+      "home_team": "OKC",
+      "away_team": "DAL",
+      "last_update": "2025-12-06T02:40:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "NYK@TOR": {
+      "spread": 2.5,
+      "total": 232.5,
+      "home_team": "TOR",
+      "away_team": "NYK",
+      "last_update": "2025-12-10T01:30:00Z",
+      "bookmaker": "DraftKings"
+    },
+    "PHX@OKC": {
+      "spread": -16.0,
+      "total": 224.5,
+      "home_team": "OKC",
+      "away_team": "PHX",
+      "last_update": "2025-12-11T00:30:00Z",
+      "bookmaker": "FanDuel"
+    },
+    "SA@LAL": {
+      "spread": -3.5,
+      "total": 234.5,
+      "home_team": "LAL",
+      "away_team": "SA",
+      "last_update": "2025-12-11T03:00:00Z",
+      "bookmaker": "FanDuel"
+    }
+  },
+  "last_updated": "2025-12-05T02:41:28.251953",
+  "total_games": 15
+}
